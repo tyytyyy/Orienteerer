@@ -1,24 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Orienteerer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw6-tS-vso">
+                                <rect key="frame" x="45" y="282" width="325" height="165"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="325" id="3FX-C6-UHd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="165" id="Gj9-j3-WdM"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Orienteering">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="40" name="Futura-Medium"/>
+                                            <font key="NSOriginalFont" size="40" name="Futura-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMT-hn-Jh8">
+                                <rect key="frame" x="120" y="466" width="174" height="61"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Start Run">
+                                            <attributes>
+                                                <font key="NSFont" size="36" name="Futura-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pSh-JT-NL1"/>
+                                    <segue destination="jbJ-jr-MJd" kind="show" id="UMm-lE-UdI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qMT-hn-Jh8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1mE-xw-STI"/>
+                            <constraint firstItem="iw6-tS-vso" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="6IC-fT-4Uf"/>
+                            <constraint firstItem="iw6-tS-vso" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="238" id="KST-l2-e5J"/>
+                            <constraint firstItem="qMT-hn-Jh8" firstAttribute="firstBaseline" secondItem="iw6-tS-vso" secondAttribute="baseline" constant="74" symbolType="layoutAnchor" id="bP0-mg-ded"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iw6-tS-vso" secondAttribute="trailing" constant="44" id="gXE-cl-4Od"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Pyl-qH-HAf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-481" y="135"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fSO-9g-189">
+            <objects>
+                <viewController id="jbJ-jr-MJd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LD6-Qs-TA7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.insert" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eT2-d8-zaP">
+                                <rect key="frame" x="107" y="66" width="200" height="196.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="46E-ck-9Wl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="hxK-cD-fv2"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Time Elapsed:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEH-YU-JXf">
+                                <rect key="frame" x="20" y="485" width="313" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Distance Traveled:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQg-fq-dQc">
+                                <rect key="frame" x="20" y="556" width="313" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Average Pace:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ry-d9-vZe">
+                                <rect key="frame" x="20" y="626" width="313" height="36"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujb-PC-nIP">
+                                <rect key="frame" x="128" y="732" width="158" height="61"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="End Run">
+                                            <attributes>
+                                                <font key="NSFont" size="36" name="Futura-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="umz-Mm-rQw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ser-PG-WTo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rEH-YU-JXf" firstAttribute="leading" secondItem="ser-PG-WTo" secondAttribute="leading" constant="20" id="2bA-wd-Ss9"/>
+                            <constraint firstItem="ujb-PC-nIP" firstAttribute="centerX" secondItem="ser-PG-WTo" secondAttribute="centerX" id="6TX-kR-Vg7"/>
+                            <constraint firstItem="ujb-PC-nIP" firstAttribute="top" secondItem="1Ry-d9-vZe" secondAttribute="bottom" constant="70" id="8Po-xx-cpV"/>
+                            <constraint firstItem="ser-PG-WTo" firstAttribute="bottom" secondItem="ujb-PC-nIP" secondAttribute="bottom" constant="49" id="CfP-UY-f78"/>
+                            <constraint firstItem="NQg-fq-dQc" firstAttribute="top" secondItem="rEH-YU-JXf" secondAttribute="bottom" constant="35.5" id="FkF-Vm-FgH"/>
+                            <constraint firstItem="1Ry-d9-vZe" firstAttribute="top" secondItem="NQg-fq-dQc" secondAttribute="bottom" constant="34.5" id="IL9-NA-E1n"/>
+                            <constraint firstItem="1Ry-d9-vZe" firstAttribute="leading" secondItem="ser-PG-WTo" secondAttribute="leading" constant="20" id="NuR-fh-nYt"/>
+                            <constraint firstItem="eT2-d8-zaP" firstAttribute="top" secondItem="ser-PG-WTo" secondAttribute="top" constant="20.5" id="cZx-Rz-kfh"/>
+                            <constraint firstItem="NQg-fq-dQc" firstAttribute="leading" secondItem="ser-PG-WTo" secondAttribute="leading" constant="20" id="gNX-FX-ctT"/>
+                            <constraint firstItem="eT2-d8-zaP" firstAttribute="centerX" secondItem="ser-PG-WTo" secondAttribute="centerX" id="xxz-UL-JjD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wfr-g8-cji"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ffs-Gf-CPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782.60869565217399" y="134.59821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="text.insert" catalog="system" width="128" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
