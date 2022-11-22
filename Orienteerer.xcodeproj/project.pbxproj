@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		EC37CFEC29186DB000F97ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFEB29186DB000F97ACE /* AppDelegate.swift */; };
 		EC37CFEE29186DB000F97ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFED29186DB000F97ACE /* SceneDelegate.swift */; };
-		EC37CFF029186DB000F97ACE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFEF29186DB000F97ACE /* ViewController.swift */; };
+		EC37CFF029186DB000F97ACE /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFEF29186DB000F97ACE /* HomeScreen.swift */; };
 		EC37CFF329186DB000F97ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC37CFF129186DB000F97ACE /* Main.storyboard */; };
 		EC37CFF529186DB200F97ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC37CFF429186DB200F97ACE /* Assets.xcassets */; };
 		EC37CFF829186DB200F97ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC37CFF629186DB200F97ACE /* LaunchScreen.storyboard */; };
 		EC37D00329186DB200F97ACE /* OrienteererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37D00229186DB200F97ACE /* OrienteererTests.swift */; };
 		EC37D00D29186DB200F97ACE /* OrienteererUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37D00C29186DB200F97ACE /* OrienteererUITests.swift */; };
 		EC37D00F29186DB200F97ACE /* OrienteererUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37D00E29186DB200F97ACE /* OrienteererUITestsLaunchTests.swift */; };
+		ECB0F289292C5C850017C728 /* EndScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB0F288292C5C850017C728 /* EndScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		EC37CFE829186DB000F97ACE /* Orienteerer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orienteerer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC37CFEB29186DB000F97ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC37CFED29186DB000F97ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC37CFEF29186DB000F97ACE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC37CFEF29186DB000F97ACE /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		EC37CFF229186DB000F97ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC37CFF429186DB200F97ACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC37CFF729186DB200F97ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		EC37D00829186DB200F97ACE /* OrienteererUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrienteererUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC37D00C29186DB200F97ACE /* OrienteererUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrienteererUITests.swift; sourceTree = "<group>"; };
 		EC37D00E29186DB200F97ACE /* OrienteererUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrienteererUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECB0F288292C5C850017C728 /* EndScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,8 @@
 			children = (
 				EC37CFEB29186DB000F97ACE /* AppDelegate.swift */,
 				EC37CFED29186DB000F97ACE /* SceneDelegate.swift */,
-				EC37CFEF29186DB000F97ACE /* ViewController.swift */,
+				EC37CFEF29186DB000F97ACE /* HomeScreen.swift */,
+				ECB0F288292C5C850017C728 /* EndScreen.swift */,
 				EC37CFF129186DB000F97ACE /* Main.storyboard */,
 				EC37CFF429186DB200F97ACE /* Assets.xcassets */,
 				EC37CFF629186DB200F97ACE /* LaunchScreen.storyboard */,
@@ -258,7 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC37CFF029186DB000F97ACE /* ViewController.swift in Sources */,
+				EC37CFF029186DB000F97ACE /* HomeScreen.swift in Sources */,
+				ECB0F289292C5C850017C728 /* EndScreen.swift in Sources */,
 				EC37CFEC29186DB000F97ACE /* AppDelegate.swift in Sources */,
 				EC37CFEE29186DB000F97ACE /* SceneDelegate.swift in Sources */,
 			);
