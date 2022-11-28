@@ -13,6 +13,10 @@ class HomeScreen: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func nextScreen(_ sender: Any) {
+        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "CongratulationsScreen") as! Congratulationsscreen
+                self.navigationController?.pushViewController(secondVC, animated: true)
+    }
 }
 

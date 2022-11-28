@@ -16,7 +16,9 @@
 		EC37D00329186DB200F97ACE /* OrienteererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37D00229186DB200F97ACE /* OrienteererTests.swift */; };
 		EC37D00D29186DB200F97ACE /* OrienteererUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37D00C29186DB200F97ACE /* OrienteererUITests.swift */; };
 		EC37D00F29186DB200F97ACE /* OrienteererUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37D00E29186DB200F97ACE /* OrienteererUITestsLaunchTests.swift */; };
-		ECB0F289292C5C850017C728 /* EndScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB0F288292C5C850017C728 /* EndScreen.swift */; };
+		ECE53D3B29343D1700B301A1 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = ECE53D3A29343D1700B301A1 /* ConfettiSwiftUI */; };
+		ECE53D3D29343F2600B301A1 /* Congratulationsscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE53D3C29343F2500B301A1 /* Congratulationsscreen.swift */; };
+		ECE53D41293442A900B301A1 /* EndScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE53D40293442A900B301A1 /* EndScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,8 @@
 		EC37D00829186DB200F97ACE /* OrienteererUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrienteererUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC37D00C29186DB200F97ACE /* OrienteererUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrienteererUITests.swift; sourceTree = "<group>"; };
 		EC37D00E29186DB200F97ACE /* OrienteererUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrienteererUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		ECB0F288292C5C850017C728 /* EndScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreen.swift; sourceTree = "<group>"; };
+		ECE53D3C29343F2500B301A1 /* Congratulationsscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Congratulationsscreen.swift; sourceTree = "<group>"; };
+		ECE53D40293442A900B301A1 /* EndScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE53D3B29343D1700B301A1 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +108,8 @@
 				EC37CFEB29186DB000F97ACE /* AppDelegate.swift */,
 				EC37CFED29186DB000F97ACE /* SceneDelegate.swift */,
 				EC37CFEF29186DB000F97ACE /* HomeScreen.swift */,
-				ECB0F288292C5C850017C728 /* EndScreen.swift */,
+				ECE53D3C29343F2500B301A1 /* Congratulationsscreen.swift */,
+				ECE53D40293442A900B301A1 /* EndScreen.swift */,
 				EC37CFF129186DB000F97ACE /* Main.storyboard */,
 				EC37CFF429186DB200F97ACE /* Assets.xcassets */,
 				EC37CFF629186DB200F97ACE /* LaunchScreen.storyboard */,
@@ -146,6 +151,9 @@
 			dependencies = (
 			);
 			name = Orienteerer;
+			packageProductDependencies = (
+				ECE53D3A29343D1700B301A1 /* ConfettiSwiftUI */,
+			);
 			productName = Orienteerer;
 			productReference = EC37CFE829186DB000F97ACE /* Orienteerer.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +226,9 @@
 				Base,
 			);
 			mainGroup = EC37CFDF29186DB000F97ACE;
+			packageReferences = (
+				ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = EC37CFE929186DB000F97ACE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,9 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE53D3D29343F2600B301A1 /* Congratulationsscreen.swift in Sources */,
 				EC37CFF029186DB000F97ACE /* HomeScreen.swift in Sources */,
-				ECB0F289292C5C850017C728 /* EndScreen.swift in Sources */,
 				EC37CFEC29186DB000F97ACE /* AppDelegate.swift in Sources */,
+				ECE53D41293442A900B301A1 /* EndScreen.swift in Sources */,
 				EC37CFEE29186DB000F97ACE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +618,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECE53D3A29343D1700B301A1 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC37CFE029186DB000F97ACE /* Project object */;
 }

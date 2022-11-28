@@ -2,7 +2,7 @@
 //  EndScreen.swift
 //  Orienteerer
 //
-//  Created by Tom Yuan on 11/21/22.
+//  Created by Tom Yuan on 11/27/22.
 //
 
 import UIKit
