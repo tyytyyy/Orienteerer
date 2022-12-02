@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3kw-DZ-Fni">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw6-tS-vso">
-                                <rect key="frame" x="79.000000000000014" y="279" width="232.33333333333337" height="165"/>
+                                <rect key="frame" x="79.000000000000014" y="323" width="232.33333333333337" height="52"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="165" id="Gj9-j3-WdM"/>
@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vth-xT-LRV">
-                                <rect key="frame" x="108" y="526" width="174" height="61"/>
+                                <rect key="frame" x="108" y="457" width="174" height="61"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
@@ -50,7 +50,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="jbJ-jr-MJd" kind="presentation" modalPresentationStyle="fullScreen" id="hfn-22-j9x"/>
+                                    <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FwH-vE-Xj9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,7 +68,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-481.53846153846155" y="134.36018957345971"/>
+            <point key="canvasLocation" x="573.84615384615381" y="133.64928909952607"/>
+        </scene>
+        <!--Congratulationsscreen-->
+        <scene sceneID="bAp-MD-kQj">
+            <objects>
+                <viewController storyboardIdentifier="CongratulationsScreen" id="bfa-h1-noQ" customClass="Congratulationsscreen" customModule="Orienteerer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tL8-7f-iT1">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQa-e4-Pcg">
+                                <rect key="frame" x="15" y="294" width="360" height="62.333333333333314"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Congratulations!">
+                                        <attributes>
+                                            <font key="NSFont" size="48" name="Futura-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njs-O5-3tH">
+                                <rect key="frame" x="46" y="406" width="298" height="32"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="You have finished your run!">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bY4-o0-YtL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BQa-e4-Pcg" firstAttribute="centerX" secondItem="tL8-7f-iT1" secondAttribute="centerX" id="2GY-1i-nxp"/>
+                            <constraint firstItem="BQa-e4-Pcg" firstAttribute="top" secondItem="bY4-o0-YtL" secondAttribute="top" constant="247" id="DpY-yb-ywa"/>
+                            <constraint firstItem="Njs-O5-3tH" firstAttribute="centerX" secondItem="tL8-7f-iT1" secondAttribute="centerX" id="UMe-c2-2cU"/>
+                            <constraint firstItem="Njs-O5-3tH" firstAttribute="top" secondItem="BQa-e4-Pcg" secondAttribute="bottom" constant="49.666666666666686" id="jEW-R2-gs6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ha-98-ZDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1261.5384615384614" y="133.64928909952607"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hZq-QH-AiV">
@@ -129,7 +175,7 @@
         <!--End Screen-->
         <scene sceneID="fSO-9g-189">
             <objects>
-                <viewController storyboardIdentifier="EndScreen" id="jbJ-jr-MJd" customClass="EndScreen" customModule="Orienteerer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndScreen1" id="jbJ-jr-MJd" customClass="EndScreen" customModule="Orienteerer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LD6-Qs-TA7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,7 +252,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ffs-Gf-CPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781.53846153846155" y="134.36018957345971"/>
+            <point key="canvasLocation" x="2083.0769230769229" y="133.64928909952607"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iJa-MG-pXg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3kw-DZ-Fni" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SVh-u1-Wf8">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DMY-jt-i8C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9b-SD-jx6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-355.38461538461536" y="133.64928909952607"/>
         </scene>
     </scenes>
     <resources>
