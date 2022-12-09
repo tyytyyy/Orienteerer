@@ -1,13 +1,13 @@
 //
-//  EndScreen.swift
+//  InProcessScreen.swift
 //  Orienteerer
 //
-//  Created by Tom Yuan on 11/27/22.
+//  Created by Tom Yuan on 12/7/22.
 //
 
 import UIKit
 
-class EndScreen: UIViewController {
+class InProcessScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,11 +15,13 @@ class EndScreen: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func ReturnHome(_ sender: Any) {
-        let fifthVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeScreen") as! HomeScreen
-                self.navigationController?.pushViewController(fifthVC, animated: true)
+    @IBAction func StopButton(_ sender: Any) {
+        
     }
     
+    @IBAction func FinishButton(_ sender: Any) {
+        let thirdVC = self.storyboard?.instantiateViewController(withIdentifier: "CongratulationsScreen") as! Congratulationsscreen
+                self.navigationController?.pushViewController(thirdVC, animated: true)
     }
     
     /*
@@ -32,3 +34,4 @@ class EndScreen: UIViewController {
     }
     */
 
+}

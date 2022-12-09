@@ -15,7 +15,7 @@ class HomeScreen: UIViewController {
     }
     
     @IBAction func nextScreen(_ sender: Any) {
-        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "CongratulationsScreen") as! Congratulationsscreen
+        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "InProcessScreen") as! InProcessScreen
                 self.navigationController?.pushViewController(secondVC, animated: true)
     }
 }

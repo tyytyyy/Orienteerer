@@ -1,27 +1,25 @@
 //
-//  EndScreen.swift
+//  ScanScreen.swift
 //  Orienteerer
 //
-//  Created by Tom Yuan on 11/27/22.
+//  Created by Tom Yuan on 12/8/22.
 //
 
 import UIKit
 
-class EndScreen: UIViewController {
+class ScanScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func ReturnHome(_ sender: Any) {
-        let fifthVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeScreen") as! HomeScreen
-                self.navigationController?.pushViewController(fifthVC, animated: true)
+    let image = UIImage(named: "IMG_0166")
+
+    @IBAction func TakePicture(_ sender: Any) {
+        let fourthVC = self.storyboard?.instantiateViewController(withIdentifier: "EndScreen") as! EndScreen
+                self.navigationController?.pushViewController(fourthVC, animated: true)
     }
-    
-    }
-    
     /*
     // MARK: - Navigation
 
@@ -31,4 +29,6 @@ class EndScreen: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
 
