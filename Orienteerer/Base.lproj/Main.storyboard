@@ -349,7 +349,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="AcceptTerms:" destination="Ks9-ks-SLL" eventType="touchUpInside" id="cDv-96-9gr"/>
+                                    <action selector="AcceptTerms:" destination="Ks9-ks-SLL" eventType="touchUpInside" id="YPx-hO-7sA"/>
                                 </connections>
                             </button>
                         </subviews>

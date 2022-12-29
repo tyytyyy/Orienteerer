@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A066A0B295E410A007FF8EC /* InitializationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A066A0A295E410A007FF8EC /* InitializationScreen.swift */; };
 		0A65918A2959121C00DCCBB6 /* ConfirmationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */; };
-		0A65918C295916A700DCCBB6 /* InitializationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A65918B295916A700DCCBB6 /* InitializationScreen.swift */; };
 		EC3069A82942F77600069B46 /* ScanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3069A72942F77600069B46 /* ScanScreen.swift */; };
 		EC37CFEC29186DB000F97ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFEB29186DB000F97ACE /* AppDelegate.swift */; };
 		EC37CFEE29186DB000F97ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFED29186DB000F97ACE /* SceneDelegate.swift */; };
@@ -43,8 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A066A0A295E410A007FF8EC /* InitializationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationScreen.swift; sourceTree = "<group>"; };
 		0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationScreen.swift; sourceTree = "<group>"; };
-		0A65918B295916A700DCCBB6 /* InitializationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationScreen.swift; sourceTree = "<group>"; };
 		EC3069A72942F77600069B46 /* ScanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreen.swift; sourceTree = "<group>"; };
 		EC37CFE829186DB000F97ACE /* Orienteerer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orienteerer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC37CFEB29186DB000F97ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,9 +119,9 @@
 				EC6BE9822941AEBF00694E32 /* InProcessScreen.swift */,
 				ECE53D3C29343F2500B301A1 /* Congratulationsscreen.swift */,
 				EC3069A72942F77600069B46 /* ScanScreen.swift */,
+				0A066A0A295E410A007FF8EC /* InitializationScreen.swift */,
 				ECE53D40293442A900B301A1 /* EndScreen.swift */,
 				0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */,
-				0A65918B295916A700DCCBB6 /* InitializationScreen.swift */,
 				EC37CFF129186DB000F97ACE /* Main.storyboard */,
 				EC37CFF429186DB200F97ACE /* Assets.xcassets */,
 				EC37CFF629186DB200F97ACE /* LaunchScreen.storyboard */,
@@ -291,7 +291,7 @@
 				EC37CFF029186DB000F97ACE /* HomeScreen.swift in Sources */,
 				0A65918A2959121C00DCCBB6 /* ConfirmationScreen.swift in Sources */,
 				EC37CFEC29186DB000F97ACE /* AppDelegate.swift in Sources */,
-				0A65918C295916A700DCCBB6 /* InitializationScreen.swift in Sources */,
+				0A066A0B295E410A007FF8EC /* InitializationScreen.swift in Sources */,
 				ECE53D41293442A900B301A1 /* EndScreen.swift in Sources */,
 				EC37CFEE29186DB000F97ACE /* SceneDelegate.swift in Sources */,
 			);
