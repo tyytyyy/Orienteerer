@@ -17,7 +17,7 @@ class ScanScreen: UIViewController {
     let image = UIImage(named: "IMG_0166")
 
     @IBAction func TakePicture(_ sender: Any) {
-        let fourthVC = self.storyboard?.instantiateViewController(withIdentifier: "EndScreen") as! EndScreen
+        let fourthVC = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmationScreen") as! ConfirmationScreen
                 self.navigationController?.pushViewController(fourthVC, animated: true)
     }
     /*
