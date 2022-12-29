@@ -377,24 +377,6 @@
                                     <constraint firstAttribute="width" constant="176" id="vro-7K-PTO"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zIu-N3-OMh">
-                                <rect key="frame" x="77.000000000000014" y="716" width="236.33333333333337" height="61"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Return Home">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ReturnHome:" destination="jbJ-jr-MJd" eventType="touchUpInside" id="SvO-gT-ncr"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ko3-mo-if8">
                                 <rect key="frame" x="25.333333333333343" y="72" width="339.33333333333326" height="72"/>
                                 <attributedString key="attributedText">
@@ -428,20 +410,73 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAK-2z-n7i">
+                                <rect key="frame" x="58.666666666666657" y="731" width="272.66666666666674" height="61"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zIu-N3-OMh">
+                                        <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="61"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Done">
+                                                    <attributes>
+                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="ReturnHome:" destination="jbJ-jr-MJd" eventType="touchUpInside" id="SvO-gT-ncr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="             " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zI-JW-84W">
+                                        <rect key="frame" x="111.6666666666667" y="0.0" width="56.666666666666671" height="61"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKC-wr-Owu">
+                                        <rect key="frame" x="168.33333333333334" y="0.0" width="104.33333333333334" height="61"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="S">
+                                                    <attributes>
+                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="ave">
+                                                    <attributes>
+                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfJ-73-r1f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ser-PG-WTo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="sAK-2z-n7i" firstAttribute="top" secondItem="fEO-Qo-nzN" secondAttribute="bottom" constant="46" id="DfR-VH-xeh"/>
                             <constraint firstItem="fEO-Qo-nzN" firstAttribute="top" secondItem="eT2-d8-zaP" secondAttribute="bottom" constant="91" id="FJM-Fs-Z9s"/>
                             <constraint firstItem="Ko3-mo-if8" firstAttribute="centerX" secondItem="LD6-Qs-TA7" secondAttribute="centerX" id="J13-1E-zYm"/>
                             <constraint firstItem="ser-PG-WTo" firstAttribute="trailing" secondItem="fEO-Qo-nzN" secondAttribute="trailing" constant="140" id="MbH-rM-Bgu"/>
-                            <constraint firstItem="zIu-N3-OMh" firstAttribute="centerX" secondItem="LD6-Qs-TA7" secondAttribute="centerX" id="NYV-Cj-baP"/>
                             <constraint firstItem="fEO-Qo-nzN" firstAttribute="leading" secondItem="ser-PG-WTo" secondAttribute="leading" constant="55" id="Oe9-B3-0lU"/>
-                            <constraint firstItem="zIu-N3-OMh" firstAttribute="top" secondItem="fEO-Qo-nzN" secondAttribute="bottom" constant="31" id="StY-o5-xcb"/>
+                            <constraint firstItem="sAK-2z-n7i" firstAttribute="centerX" secondItem="LD6-Qs-TA7" secondAttribute="centerX" id="Ujh-0Q-wwc"/>
                             <constraint firstItem="eT2-d8-zaP" firstAttribute="centerX" secondItem="LD6-Qs-TA7" secondAttribute="centerX" id="VgE-3u-A8a"/>
                             <constraint firstItem="Ko3-mo-if8" firstAttribute="top" secondItem="ser-PG-WTo" secondAttribute="top" constant="25" id="fcX-1Y-mQh"/>
-                            <constraint firstItem="ser-PG-WTo" firstAttribute="bottom" secondItem="zIu-N3-OMh" secondAttribute="bottom" constant="33" id="iKm-0e-xTv"/>
                             <constraint firstItem="eT2-d8-zaP" firstAttribute="top" secondItem="Ko3-mo-if8" secondAttribute="bottom" constant="40" id="oVY-zr-6YX"/>
+                            <constraint firstItem="ser-PG-WTo" firstAttribute="bottom" secondItem="sAK-2z-n7i" secondAttribute="bottom" constant="18" id="t9n-eP-gAc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wfr-g8-cji"/>
