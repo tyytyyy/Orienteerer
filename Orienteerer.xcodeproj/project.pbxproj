@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A066A0B295E410A007FF8EC /* InitializationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A066A0A295E410A007FF8EC /* InitializationScreen.swift */; };
+		0A066A14295E4959007FF8EC /* EndScreenTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A066A13295E4959007FF8EC /* EndScreenTwo.swift */; };
 		0A65918A2959121C00DCCBB6 /* ConfirmationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */; };
 		EC3069A82942F77600069B46 /* ScanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3069A72942F77600069B46 /* ScanScreen.swift */; };
 		EC37CFEC29186DB000F97ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFEB29186DB000F97ACE /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0A066A0A295E410A007FF8EC /* InitializationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationScreen.swift; sourceTree = "<group>"; };
+		0A066A13295E4959007FF8EC /* EndScreenTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreenTwo.swift; sourceTree = "<group>"; };
 		0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationScreen.swift; sourceTree = "<group>"; };
 		EC3069A72942F77600069B46 /* ScanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreen.swift; sourceTree = "<group>"; };
 		EC37CFE829186DB000F97ACE /* Orienteerer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orienteerer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 				EC3069A72942F77600069B46 /* ScanScreen.swift */,
 				0A066A0A295E410A007FF8EC /* InitializationScreen.swift */,
 				ECE53D40293442A900B301A1 /* EndScreen.swift */,
+				0A066A13295E4959007FF8EC /* EndScreenTwo.swift */,
 				0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */,
 				EC37CFF129186DB000F97ACE /* Main.storyboard */,
 				EC37CFF429186DB200F97ACE /* Assets.xcassets */,
@@ -291,6 +294,7 @@
 				EC37CFF029186DB000F97ACE /* HomeScreen.swift in Sources */,
 				0A65918A2959121C00DCCBB6 /* ConfirmationScreen.swift in Sources */,
 				EC37CFEC29186DB000F97ACE /* AppDelegate.swift in Sources */,
+				0A066A14295E4959007FF8EC /* EndScreenTwo.swift in Sources */,
 				0A066A0B295E410A007FF8EC /* InitializationScreen.swift in Sources */,
 				ECE53D41293442A900B301A1 /* EndScreen.swift in Sources */,
 				EC37CFEE29186DB000F97ACE /* SceneDelegate.swift in Sources */,

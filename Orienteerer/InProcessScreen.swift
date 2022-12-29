@@ -16,7 +16,8 @@ class InProcessScreen: UIViewController {
     }
     
     @IBAction func StopButton(_ sender: Any) {
-        
+        let ninthVC = self.storyboard?.instantiateViewController(withIdentifier: "EndScreenTwo") as! EndScreenTwo
+                self.navigationController?.pushViewController(ninthVC, animated: true)
     }
     
     @IBAction func FinishButton(_ sender: Any) {
