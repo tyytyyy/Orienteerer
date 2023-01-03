@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import HealthKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        var healthStore = HKHealthStore()
+            let allTypes = Set([HKObjectType.workoutType(),
+                                HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
+                                HKObjectType.quantityType(forIdentifier: .distanceCycling)!,
+                                HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!,
+                                HKObjectType.quantityType(forIdentifier: .heartRate)!])
+
+            healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
+                if !success {
+                    // Handle the error here.
+                }
+            }
+            
+        
         return true
     }
 

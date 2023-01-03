@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>Used for data analysis and data output at the end of run</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Used for data analysis</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Used to update health data throughout run</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

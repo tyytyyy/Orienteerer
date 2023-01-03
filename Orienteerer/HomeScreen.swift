@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import HealthKit
+
 
 class HomeScreen: UIViewController {
+    var healthStore : HKHealthStore?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,5 +22,6 @@ class HomeScreen: UIViewController {
         let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "InProcessScreen") as! InProcessScreen
                 self.navigationController?.pushViewController(secondVC, animated: true)
     }
+    
 }
 

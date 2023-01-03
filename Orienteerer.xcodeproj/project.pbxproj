@@ -62,6 +62,7 @@
 		EC37D00C29186DB200F97ACE /* OrienteererUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrienteererUITests.swift; sourceTree = "<group>"; };
 		EC37D00E29186DB200F97ACE /* OrienteererUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrienteererUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC6BE9822941AEBF00694E32 /* InProcessScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InProcessScreen.swift; sourceTree = "<group>"; };
+		ECAD3E032964D8CB00F99761 /* Orienteerer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Orienteerer.entitlements; sourceTree = "<group>"; };
 		ECE53D3C29343F2500B301A1 /* Congratulationsscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Congratulationsscreen.swift; sourceTree = "<group>"; };
 		ECE53D40293442A900B301A1 /* EndScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +116,7 @@
 		EC37CFEA29186DB000F97ACE /* Orienteerer */ = {
 			isa = PBXGroup;
 			children = (
+				ECAD3E032964D8CB00F99761 /* Orienteerer.entitlements */,
 				EC37CFEB29186DB000F97ACE /* AppDelegate.swift */,
 				EC37CFED29186DB000F97ACE /* SceneDelegate.swift */,
 				EC37CFEF29186DB000F97ACE /* HomeScreen.swift */,
@@ -473,11 +475,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JF7BB9ZW8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used to gather data for analysis and for showcase at end of run";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -504,11 +508,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JF7BB9ZW8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used to gather data for analysis and for showcase at end of run";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
