@@ -11,6 +11,9 @@
 		0A066A14295E4959007FF8EC /* EndScreenTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A066A13295E4959007FF8EC /* EndScreenTwo.swift */; };
 		0A65918A2959121C00DCCBB6 /* ConfirmationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */; };
 		0AA65FED29650DFB00FE04AB /* SetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA65FEC29650DFB00FE04AB /* SetupAssistant.swift */; };
+		17FDB26EAE162935807F8AFA /* libPods-OrienteererTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DE53FD26DF5A5E8A4B1D19 /* libPods-OrienteererTests.a */; };
+		2DDA1C0107CCCC9BDE50B590 /* libPods-Orienteerer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF05E62E5AB4A02C4AA41AC5 /* libPods-Orienteerer.a */; };
+		D6496DB953A0BA225BCC40BE /* libPods-Orienteerer-OrienteererUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C34D6E6C4B2BF0C2B97BF6C4 /* libPods-Orienteerer-OrienteererUITests.a */; };
 		EC3069A82942F77600069B46 /* ScanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3069A72942F77600069B46 /* ScanScreen.swift */; };
 		EC37CFEC29186DB000F97ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFEB29186DB000F97ACE /* AppDelegate.swift */; };
 		EC37CFEE29186DB000F97ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFED29186DB000F97ACE /* SceneDelegate.swift */; };
@@ -49,6 +52,15 @@
 		0A066A13295E4959007FF8EC /* EndScreenTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreenTwo.swift; sourceTree = "<group>"; };
 		0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationScreen.swift; sourceTree = "<group>"; };
 		0AA65FEC29650DFB00FE04AB /* SetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAssistant.swift; sourceTree = "<group>"; };
+		12591ED49178327DDE5A13F8 /* Pods-Orienteerer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orienteerer.release.xcconfig"; path = "Target Support Files/Pods-Orienteerer/Pods-Orienteerer.release.xcconfig"; sourceTree = "<group>"; };
+		4CC83BC436E4C5804C52335B /* Pods-Orienteerer-OrienteererUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orienteerer-OrienteererUITests.release.xcconfig"; path = "Target Support Files/Pods-Orienteerer-OrienteererUITests/Pods-Orienteerer-OrienteererUITests.release.xcconfig"; sourceTree = "<group>"; };
+		58DE53FD26DF5A5E8A4B1D19 /* libPods-OrienteererTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrienteererTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E3D3C3E8671CB3F723F995B /* Pods-OrienteererTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrienteererTests.release.xcconfig"; path = "Target Support Files/Pods-OrienteererTests/Pods-OrienteererTests.release.xcconfig"; sourceTree = "<group>"; };
+		8747C388B389E6E454670ED3 /* Pods-Orienteerer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orienteerer.debug.xcconfig"; path = "Target Support Files/Pods-Orienteerer/Pods-Orienteerer.debug.xcconfig"; sourceTree = "<group>"; };
+		927100674767FD42E8B2F6FF /* Pods-OrienteererTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrienteererTests.debug.xcconfig"; path = "Target Support Files/Pods-OrienteererTests/Pods-OrienteererTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF05E62E5AB4A02C4AA41AC5 /* libPods-Orienteerer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Orienteerer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C34D6E6C4B2BF0C2B97BF6C4 /* libPods-Orienteerer-OrienteererUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Orienteerer-OrienteererUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2FE9BE1084D6C813D5FCEDE /* Pods-Orienteerer-OrienteererUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orienteerer-OrienteererUITests.debug.xcconfig"; path = "Target Support Files/Pods-Orienteerer-OrienteererUITests/Pods-Orienteerer-OrienteererUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC3069A72942F77600069B46 /* ScanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreen.swift; sourceTree = "<group>"; };
 		EC37CFE829186DB000F97ACE /* Orienteerer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orienteerer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC37CFEB29186DB000F97ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECE53D3B29343D1700B301A1 /* ConfettiSwiftUI in Frameworks */,
+				2DDA1C0107CCCC9BDE50B590 /* libPods-Orienteerer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17FDB26EAE162935807F8AFA /* libPods-OrienteererTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +103,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6496DB953A0BA225BCC40BE /* libPods-Orienteerer-OrienteererUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19033B0545354120FCB3E59B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF05E62E5AB4A02C4AA41AC5 /* libPods-Orienteerer.a */,
+				C34D6E6C4B2BF0C2B97BF6C4 /* libPods-Orienteerer-OrienteererUITests.a */,
+				58DE53FD26DF5A5E8A4B1D19 /* libPods-OrienteererTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99F2E2FFBA6D1AE79D84A346 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8747C388B389E6E454670ED3 /* Pods-Orienteerer.debug.xcconfig */,
+				12591ED49178327DDE5A13F8 /* Pods-Orienteerer.release.xcconfig */,
+				D2FE9BE1084D6C813D5FCEDE /* Pods-Orienteerer-OrienteererUITests.debug.xcconfig */,
+				4CC83BC436E4C5804C52335B /* Pods-Orienteerer-OrienteererUITests.release.xcconfig */,
+				927100674767FD42E8B2F6FF /* Pods-OrienteererTests.debug.xcconfig */,
+				7E3D3C3E8671CB3F723F995B /* Pods-OrienteererTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EC37CFDF29186DB000F97ACE = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +141,8 @@
 				EC37D00129186DB200F97ACE /* OrienteererTests */,
 				EC37D00B29186DB200F97ACE /* OrienteererUITests */,
 				EC37CFE929186DB000F97ACE /* Products */,
+				99F2E2FFBA6D1AE79D84A346 /* Pods */,
+				19033B0545354120FCB3E59B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC37D01229186DB200F97ACE /* Build configuration list for PBXNativeTarget "Orienteerer" */;
 			buildPhases = (
+				EA047CCE0BEE9C1D8802646B /* [CP] Check Pods Manifest.lock */,
 				EC37CFE429186DB000F97ACE /* Sources */,
 				EC37CFE529186DB000F97ACE /* Frameworks */,
 				EC37CFE629186DB000F97ACE /* Resources */,
+				CBF77A95C28AE3E6BE7C2948 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC37D01529186DB200F97ACE /* Build configuration list for PBXNativeTarget "OrienteererTests" */;
 			buildPhases = (
+				916A3013D76AB4C688B91EF3 /* [CP] Check Pods Manifest.lock */,
 				EC37CFFA29186DB200F97ACE /* Sources */,
 				EC37CFFB29186DB200F97ACE /* Frameworks */,
 				EC37CFFC29186DB200F97ACE /* Resources */,
@@ -200,9 +244,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC37D01829186DB200F97ACE /* Build configuration list for PBXNativeTarget "OrienteererUITests" */;
 			buildPhases = (
+				B0580D91D61ED6706E1F4D34 /* [CP] Check Pods Manifest.lock */,
 				EC37D00429186DB200F97ACE /* Sources */,
 				EC37D00529186DB200F97ACE /* Frameworks */,
 				EC37D00629186DB200F97ACE /* Resources */,
+				176E7EB6D4F4AB3BF24528DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,7 +294,7 @@
 			);
 			mainGroup = EC37CFDF29186DB000F97ACE;
 			packageReferences = (
-				ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+				ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI.git" */,
 			);
 			productRefGroup = EC37CFE929186DB000F97ACE /* Products */;
 			projectDirPath = "";
@@ -287,6 +333,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		176E7EB6D4F4AB3BF24528DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Orienteerer-OrienteererUITests/Pods-Orienteerer-OrienteererUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Orienteerer-OrienteererUITests/Pods-Orienteerer-OrienteererUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Orienteerer-OrienteererUITests/Pods-Orienteerer-OrienteererUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		916A3013D76AB4C688B91EF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrienteererTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0580D91D61ED6706E1F4D34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Orienteerer-OrienteererUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBF77A95C28AE3E6BE7C2948 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Orienteerer/Pods-Orienteerer-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Orienteerer/Pods-Orienteerer-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Orienteerer/Pods-Orienteerer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA047CCE0BEE9C1D8802646B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Orienteerer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC37CFE429186DB000F97ACE /* Sources */ = {
@@ -475,6 +624,7 @@
 		};
 		EC37D01329186DB200F97ACE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8747C388B389E6E454670ED3 /* Pods-Orienteerer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -510,6 +660,7 @@
 		};
 		EC37D01429186DB200F97ACE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12591ED49178327DDE5A13F8 /* Pods-Orienteerer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -544,6 +695,7 @@
 		};
 		EC37D01629186DB200F97ACE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 927100674767FD42E8B2F6FF /* Pods-OrienteererTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +716,7 @@
 		};
 		EC37D01729186DB200F97ACE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E3D3C3E8671CB3F723F995B /* Pods-OrienteererTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -584,6 +737,7 @@
 		};
 		EC37D01929186DB200F97ACE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2FE9BE1084D6C813D5FCEDE /* Pods-Orienteerer-OrienteererUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -602,6 +756,7 @@
 		};
 		EC37D01A29186DB200F97ACE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CC83BC436E4C5804C52335B /* Pods-Orienteerer-OrienteererUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -660,7 +815,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+		ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
 			requirement = {
@@ -673,7 +828,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		ECE53D3A29343D1700B301A1 /* ConfettiSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			package = ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI.git" */;
 			productName = ConfettiSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

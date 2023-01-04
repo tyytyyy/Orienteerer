@@ -4,15 +4,23 @@
 //
 //  Created by Tom Yuan on 11/27/22.
 //
-
+import GoogleMaps
 import UIKit
 
 class EndScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        GMSServices.provideAPIKey("AIzaSyDR28cVG3T1eBZfzjJwxdmU41zg2CRktAA")
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+        self.view.addSubview(mapView)
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+        marker.title = "Sydney"
+        marker.snippet = "Australia"
+        marker.map = mapView
+        print("License: \n\n\(GMSServices.openSourceLicenseInfo())")
     }
     
     @IBAction func ReturnHome(_ sender: Any) {
