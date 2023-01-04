@@ -10,6 +10,7 @@
 		0A066A0B295E410A007FF8EC /* InitializationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A066A0A295E410A007FF8EC /* InitializationScreen.swift */; };
 		0A066A14295E4959007FF8EC /* EndScreenTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A066A13295E4959007FF8EC /* EndScreenTwo.swift */; };
 		0A65918A2959121C00DCCBB6 /* ConfirmationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */; };
+		0AA65FED29650DFB00FE04AB /* SetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA65FEC29650DFB00FE04AB /* SetupAssistant.swift */; };
 		EC3069A82942F77600069B46 /* ScanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3069A72942F77600069B46 /* ScanScreen.swift */; };
 		EC37CFEC29186DB000F97ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFEB29186DB000F97ACE /* AppDelegate.swift */; };
 		EC37CFEE29186DB000F97ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFED29186DB000F97ACE /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 		0A066A0A295E410A007FF8EC /* InitializationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationScreen.swift; sourceTree = "<group>"; };
 		0A066A13295E4959007FF8EC /* EndScreenTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreenTwo.swift; sourceTree = "<group>"; };
 		0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationScreen.swift; sourceTree = "<group>"; };
+		0AA65FEC29650DFB00FE04AB /* SetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAssistant.swift; sourceTree = "<group>"; };
 		EC3069A72942F77600069B46 /* ScanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreen.swift; sourceTree = "<group>"; };
 		EC37CFE829186DB000F97ACE /* Orienteerer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orienteerer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC37CFEB29186DB000F97ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				ECAD3E032964D8CB00F99761 /* Orienteerer.entitlements */,
 				EC37CFEB29186DB000F97ACE /* AppDelegate.swift */,
+				0AA65FEC29650DFB00FE04AB /* SetupAssistant.swift */,
 				EC37CFED29186DB000F97ACE /* SceneDelegate.swift */,
 				EC37CFEF29186DB000F97ACE /* HomeScreen.swift */,
 				EC6BE9822941AEBF00694E32 /* InProcessScreen.swift */,
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6BE9832941AEBF00694E32 /* InProcessScreen.swift in Sources */,
+				0AA65FED29650DFB00FE04AB /* SetupAssistant.swift in Sources */,
 				ECE53D3D29343F2600B301A1 /* Congratulationsscreen.swift in Sources */,
 				EC3069A82942F77600069B46 /* ScanScreen.swift in Sources */,
 				EC37CFF029186DB000F97ACE /* HomeScreen.swift in Sources */,
@@ -478,10 +482,12 @@
 				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JF7BB9ZW8A;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used to gather data for analysis and for showcase at end of run";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used for data analysis and data output at the end of run";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used for data analysis";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to update health data throughout run";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -511,10 +517,12 @@
 				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JF7BB9ZW8A;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
-				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used to gather data for analysis and for showcase at end of run";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used for data analysis and data output at the end of run";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used for data analysis";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to update health data throughout run";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
