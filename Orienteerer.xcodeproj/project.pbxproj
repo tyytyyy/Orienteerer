@@ -11,9 +11,9 @@
 		0A066A14295E4959007FF8EC /* EndScreenTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A066A13295E4959007FF8EC /* EndScreenTwo.swift */; };
 		0A65918A2959121C00DCCBB6 /* ConfirmationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */; };
 		0AA65FED29650DFB00FE04AB /* SetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA65FEC29650DFB00FE04AB /* SetupAssistant.swift */; };
-		17FDB26EAE162935807F8AFA /* libPods-OrienteererTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DE53FD26DF5A5E8A4B1D19 /* libPods-OrienteererTests.a */; };
-		2DDA1C0107CCCC9BDE50B590 /* libPods-Orienteerer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF05E62E5AB4A02C4AA41AC5 /* libPods-Orienteerer.a */; };
-		D6496DB953A0BA225BCC40BE /* libPods-Orienteerer-OrienteererUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C34D6E6C4B2BF0C2B97BF6C4 /* libPods-Orienteerer-OrienteererUITests.a */; };
+		5D98F8815ABA3443BF569B8C /* Pods_Orienteerer_OrienteererUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5233F8C9456A2C97A717327 /* Pods_Orienteerer_OrienteererUITests.framework */; };
+		7902495926A4E46365F45C0F /* Pods_OrienteererTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47A296565A3995D1BF31C8B /* Pods_OrienteererTests.framework */; };
+		7EF7E7B33092613E7DB20FD2 /* Pods_Orienteerer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6005CFBBF79A54529CF871D /* Pods_Orienteerer.framework */; };
 		EC3069A82942F77600069B46 /* ScanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3069A72942F77600069B46 /* ScanScreen.swift */; };
 		EC37CFEC29186DB000F97ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFEB29186DB000F97ACE /* AppDelegate.swift */; };
 		EC37CFEE29186DB000F97ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC37CFED29186DB000F97ACE /* SceneDelegate.swift */; };
@@ -54,12 +54,12 @@
 		0AA65FEC29650DFB00FE04AB /* SetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAssistant.swift; sourceTree = "<group>"; };
 		12591ED49178327DDE5A13F8 /* Pods-Orienteerer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orienteerer.release.xcconfig"; path = "Target Support Files/Pods-Orienteerer/Pods-Orienteerer.release.xcconfig"; sourceTree = "<group>"; };
 		4CC83BC436E4C5804C52335B /* Pods-Orienteerer-OrienteererUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orienteerer-OrienteererUITests.release.xcconfig"; path = "Target Support Files/Pods-Orienteerer-OrienteererUITests/Pods-Orienteerer-OrienteererUITests.release.xcconfig"; sourceTree = "<group>"; };
-		58DE53FD26DF5A5E8A4B1D19 /* libPods-OrienteererTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrienteererTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E3D3C3E8671CB3F723F995B /* Pods-OrienteererTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrienteererTests.release.xcconfig"; path = "Target Support Files/Pods-OrienteererTests/Pods-OrienteererTests.release.xcconfig"; sourceTree = "<group>"; };
 		8747C388B389E6E454670ED3 /* Pods-Orienteerer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orienteerer.debug.xcconfig"; path = "Target Support Files/Pods-Orienteerer/Pods-Orienteerer.debug.xcconfig"; sourceTree = "<group>"; };
 		927100674767FD42E8B2F6FF /* Pods-OrienteererTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrienteererTests.debug.xcconfig"; path = "Target Support Files/Pods-OrienteererTests/Pods-OrienteererTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BF05E62E5AB4A02C4AA41AC5 /* libPods-Orienteerer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Orienteerer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C34D6E6C4B2BF0C2B97BF6C4 /* libPods-Orienteerer-OrienteererUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Orienteerer-OrienteererUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6005CFBBF79A54529CF871D /* Pods_Orienteerer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orienteerer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B47A296565A3995D1BF31C8B /* Pods_OrienteererTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrienteererTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5233F8C9456A2C97A717327 /* Pods_Orienteerer_OrienteererUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Orienteerer_OrienteererUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FE9BE1084D6C813D5FCEDE /* Pods-Orienteerer-OrienteererUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orienteerer-OrienteererUITests.debug.xcconfig"; path = "Target Support Files/Pods-Orienteerer-OrienteererUITests/Pods-Orienteerer-OrienteererUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC3069A72942F77600069B46 /* ScanScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanScreen.swift; sourceTree = "<group>"; };
 		EC37CFE829186DB000F97ACE /* Orienteerer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orienteerer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECE53D3B29343D1700B301A1 /* ConfettiSwiftUI in Frameworks */,
-				2DDA1C0107CCCC9BDE50B590 /* libPods-Orienteerer.a in Frameworks */,
+				7EF7E7B33092613E7DB20FD2 /* Pods_Orienteerer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17FDB26EAE162935807F8AFA /* libPods-OrienteererTests.a in Frameworks */,
+				7902495926A4E46365F45C0F /* Pods_OrienteererTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6496DB953A0BA225BCC40BE /* libPods-Orienteerer-OrienteererUITests.a in Frameworks */,
+				5D98F8815ABA3443BF569B8C /* Pods_Orienteerer_OrienteererUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,9 +113,9 @@
 		19033B0545354120FCB3E59B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF05E62E5AB4A02C4AA41AC5 /* libPods-Orienteerer.a */,
-				C34D6E6C4B2BF0C2B97BF6C4 /* libPods-Orienteerer-OrienteererUITests.a */,
-				58DE53FD26DF5A5E8A4B1D19 /* libPods-OrienteererTests.a */,
+				A6005CFBBF79A54529CF871D /* Pods_Orienteerer.framework */,
+				B5233F8C9456A2C97A717327 /* Pods_Orienteerer_OrienteererUITests.framework */,
+				B47A296565A3995D1BF31C8B /* Pods_OrienteererTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -130,7 +130,6 @@
 				927100674767FD42E8B2F6FF /* Pods-OrienteererTests.debug.xcconfig */,
 				7E3D3C3E8671CB3F723F995B /* Pods-OrienteererTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -294,7 +293,7 @@
 			);
 			mainGroup = EC37CFDF29186DB000F97ACE;
 			packageReferences = (
-				ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI.git" */,
+				ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = EC37CFE929186DB000F97ACE /* Products */;
 			projectDirPath = "";
@@ -815,7 +814,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI.git" */ = {
+		ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
 			requirement = {
@@ -828,7 +827,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		ECE53D3A29343D1700B301A1 /* ConfettiSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI.git" */;
+			package = ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
 			productName = ConfettiSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
