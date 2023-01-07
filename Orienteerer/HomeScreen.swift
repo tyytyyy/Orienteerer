@@ -10,12 +10,13 @@ import HealthKit
 
 
 class HomeScreen: UIViewController {
-    var healthStore : HKHealthStore?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        authorize()
         // Do any additional setup after loading the view.
+        
+
     }
     
     @IBAction func nextScreen(_ sender: Any) {
