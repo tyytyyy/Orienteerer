@@ -13,6 +13,8 @@ class ScanScreen: UIViewController {
     var session: AVCaptureSession?
     let output = AVCapturePhotoOutput()
     let previewLayer = AVCaptureVideoPreviewLayer()
+    @IBOutlet weak var cameraView: UIImageView!
+    @IBOutlet weak var scanSign: UILabel!
     @IBOutlet weak var shutterButton: UIButton!
     
     override func viewDidLoad() {
@@ -21,6 +23,7 @@ class ScanScreen: UIViewController {
         view.backgroundColor = .black
         view.layer.addSublayer(previewLayer)
         view.addSubview(shutterButton)
+        view.addSubview(scanSign)
         checkCameraPermissions()
         // Do any additional setup after loading the view.
     }

@@ -248,6 +248,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraView" destination="f6U-uu-gTg" id="1UV-Tm-OHi"/>
+                        <outlet property="scanSign" destination="kcG-AT-lzJ" id="uLv-Ue-Mse"/>
                         <outlet property="shutterButton" destination="Ero-sm-nML" id="Ao3-tn-9wM"/>
                     </connections>
                 </viewController>
