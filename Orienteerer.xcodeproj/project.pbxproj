@@ -631,11 +631,11 @@
 				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JF7BB9ZW8A;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow usage to your camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photo";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used for data analysis and data output at the end of run";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used for data analysis";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to update health data throughout run";
@@ -669,11 +669,11 @@
 				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JF7BB9ZW8A;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow usage to your camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photo";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used for data analysis and data output at the end of run";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used for data analysis";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to update health data throughout run";
