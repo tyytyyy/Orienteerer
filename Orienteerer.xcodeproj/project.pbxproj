@@ -130,7 +130,6 @@
 				927100674767FD42E8B2F6FF /* Pods-OrienteererTests.debug.xcconfig */,
 				7E3D3C3E8671CB3F723F995B /* Pods-OrienteererTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -294,7 +293,7 @@
 			);
 			mainGroup = EC37CFDF29186DB000F97ACE;
 			packageReferences = (
-				ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI.git" */,
+				ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = EC37CFE929186DB000F97ACE /* Products */;
 			projectDirPath = "";
@@ -632,9 +631,11 @@
 				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JF7BB9ZW8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow usage to your camera";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used for data analysis and data output at the end of run";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used for data analysis";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to update health data throughout run";
@@ -668,9 +669,11 @@
 				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JF7BB9ZW8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow usage to your camera";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used for data analysis and data output at the end of run";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used for data analysis";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to update health data throughout run";
@@ -815,7 +818,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI.git" */ = {
+		ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
 			requirement = {
@@ -828,7 +831,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		ECE53D3A29343D1700B301A1 /* ConfettiSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI.git" */;
+			package = ECE53D3929343D1700B301A1 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
 			productName = ConfettiSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

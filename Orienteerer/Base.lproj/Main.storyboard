@@ -208,16 +208,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-O2-wbG">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-O2-wbG">
                                 <rect key="frame" x="67.666666666666686" y="101" width="255" height="52"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Scan your slip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcG-AT-lzJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="255" height="52"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
-                                </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ero-sm-nML">
                                 <rect key="frame" x="145" y="689.66666666666663" width="100" height="100"/>
@@ -230,19 +222,34 @@
                                     <attributedString key="attributedTitle"/>
                                 </state>
                                 <connections>
-                                    <action selector="TakePicture:" destination="lf2-iE-3r6" eventType="touchUpInside" id="wvi-e0-WZ9"/>
+                                    <action selector="takePhoto:" destination="lf2-iE-3r6" eventType="touchUpInside" id="at5-fj-twd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Scan your slip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcG-AT-lzJ">
+                                <rect key="frame" x="67.666666666666686" y="57" width="255" height="52"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f6U-uu-gTg">
+                                <rect key="frame" x="42" y="161" width="306" height="491"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wGo-wE-XiR"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="a4b-O2-wbG" firstAttribute="centerX" secondItem="QO9-Rw-03c" secondAttribute="centerX" id="AZn-FR-sHc"/>
                             <constraint firstItem="Ero-sm-nML" firstAttribute="centerX" secondItem="QO9-Rw-03c" secondAttribute="centerX" id="Ghm-Um-lOJ"/>
-                            <constraint firstItem="kcG-AT-lzJ" firstAttribute="top" secondItem="wGo-wE-XiR" secondAttribute="top" constant="54" id="uIr-fl-8m0"/>
+                            <constraint firstItem="f6U-uu-gTg" firstAttribute="centerY" secondItem="QO9-Rw-03c" secondAttribute="centerY" id="UyY-Gk-yeX"/>
+                            <constraint firstItem="kcG-AT-lzJ" firstAttribute="top" secondItem="wGo-wE-XiR" secondAttribute="top" constant="10" id="fKe-pP-pJU"/>
+                            <constraint firstItem="f6U-uu-gTg" firstAttribute="centerX" secondItem="QO9-Rw-03c" secondAttribute="centerX" id="rjk-Ul-2X7"/>
+                            <constraint firstItem="kcG-AT-lzJ" firstAttribute="centerX" secondItem="QO9-Rw-03c" secondAttribute="centerX" id="xxq-bC-iSd"/>
                             <constraint firstItem="wGo-wE-XiR" firstAttribute="bottom" secondItem="Ero-sm-nML" secondAttribute="bottom" constant="20.333333333333371" id="yNK-R7-ZcS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="shutterButton" destination="Ero-sm-nML" id="Ao3-tn-9wM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3AI-iX-mui" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

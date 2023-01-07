@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        /*
             let healthStore = HKHealthStore()
             let allTypes = Set([HKObjectType.workoutType(),
                                 HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // Handle the error here.
                 }
             }
-            
+          */
         
         return true
     }
