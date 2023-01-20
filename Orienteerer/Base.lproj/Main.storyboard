@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3kw-DZ-Fni">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -221,9 +220,6 @@
                                 <state key="normal" title="Button" image="1">
                                     <attributedString key="attributedTitle"/>
                                 </state>
-                                <connections>
-                                    <action selector="takePhoto:" destination="lf2-iE-3r6" eventType="touchUpInside" id="at5-fj-twd"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Scan your slip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcG-AT-lzJ">
                                 <rect key="frame" x="67.666666666666686" y="57" width="255" height="52"/>
@@ -247,11 +243,6 @@
                             <constraint firstItem="wGo-wE-XiR" firstAttribute="bottom" secondItem="Ero-sm-nML" secondAttribute="bottom" constant="20.333333333333371" id="yNK-R7-ZcS"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="cameraView" destination="f6U-uu-gTg" id="1UV-Tm-OHi"/>
-                        <outlet property="scanSign" destination="kcG-AT-lzJ" id="uLv-Ue-Mse"/>
-                        <outlet property="shutterButton" destination="Ero-sm-nML" id="Ao3-tn-9wM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3AI-iX-mui" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -802,7 +793,7 @@
     </scenes>
     <resources>
         <image name="1" width="216" height="216"/>
-        <image name="text.insert" catalog="system" width="128" height="99"/>
+        <image name="text.insert" catalog="system" width="32" height="32"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

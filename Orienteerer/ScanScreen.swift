@@ -7,9 +7,27 @@
 
 import UIKit
 import AVFoundation
+import VisionKit
 
 class ScanScreen: UIViewController {
     
+    var scannerAvailable: Bool {
+        DataScannerViewController.isSupported && DataScannerViewController.isAvailable
+    }
+    
+    override func viewDidLoad() {
+        let viewController = DataScannerViewController(
+            recognizedDataTypes: [.text()],
+            qualityLevel: .balanced,
+            recognizesMultipleItems: true,
+            isHighFrameRateTrackingEnabled: false,
+            isHighlightingEnabled: true)
+        present(viewController, animated: true){
+            try? viewController.startScanning()
+        }
+    }
+    
+    /*
     var session: AVCaptureSession?
     let output = AVCapturePhotoOutput()
     let previewLayer = AVCaptureVideoPreviewLayer()
@@ -95,5 +113,5 @@ extension ScanScreen: AVCapturePhotoCaptureDelegate {
         let image = UIImage(data: data)
         session?.stopRunning()
     }
+     */
 }
-
