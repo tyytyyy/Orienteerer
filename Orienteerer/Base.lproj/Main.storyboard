@@ -220,6 +220,9 @@
                                 <state key="normal" title="Button" image="1">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="lf2-iE-3r6" eventType="touchUpInside" id="SU7-h4-Kc4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Scan your slip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcG-AT-lzJ">
                                 <rect key="frame" x="67.666666666666686" y="57" width="255" height="52"/>
@@ -243,6 +246,10 @@
                             <constraint firstItem="wGo-wE-XiR" firstAttribute="bottom" secondItem="Ero-sm-nML" secondAttribute="bottom" constant="20.333333333333371" id="yNK-R7-ZcS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scanSign" destination="kcG-AT-lzJ" id="fX5-OI-3cz"/>
+                        <outlet property="shutterButton" destination="Ero-sm-nML" id="5G9-CY-zgK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3AI-iX-mui" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -793,7 +800,7 @@
     </scenes>
     <resources>
         <image name="1" width="216" height="216"/>
-        <image name="text.insert" catalog="system" width="32" height="32"/>
+        <image name="text.insert" catalog="system" width="128" height="99"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

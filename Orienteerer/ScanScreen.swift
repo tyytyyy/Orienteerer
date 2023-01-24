@@ -7,15 +7,18 @@
 
 import UIKit
 import AVFoundation
-import VisionKit
 
 class ScanScreen: UIViewController {
-    
+    /*
     var scannerAvailable: Bool {
         DataScannerViewController.isSupported && DataScannerViewController.isAvailable
     }
     
     override func viewDidLoad() {
+        
+    }
+    
+    @IBAction func ScanButton(_ sender: Any) {
         let viewController = DataScannerViewController(
             recognizedDataTypes: [.text()],
             qualityLevel: .balanced,
@@ -25,16 +28,17 @@ class ScanScreen: UIViewController {
         present(viewController, animated: true){
             try? viewController.startScanning()
         }
+        var items: AsyncStream<[RecognizedItem]>
+        
     }
-    
-    /*
+    */
     var session: AVCaptureSession?
     let output = AVCapturePhotoOutput()
     let previewLayer = AVCaptureVideoPreviewLayer()
     @IBOutlet weak var cameraView: UIImageView!
+    
     @IBOutlet weak var scanSign: UILabel!
     @IBOutlet weak var shutterButton: UIButton!
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -113,5 +117,4 @@ extension ScanScreen: AVCapturePhotoCaptureDelegate {
         let image = UIImage(data: data)
         session?.stopRunning()
     }
-     */
 }

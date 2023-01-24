@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Vision
 
 class ConfirmationScreen: UIViewController {
     override func viewDidLoad() {
@@ -20,5 +21,30 @@ class ConfirmationScreen: UIViewController {
     @IBAction func ConfirmPicture(_ sender: Any) {
         let sixthVC = self.storyboard?.instantiateViewController(withIdentifier: "EndScreen") as! EndScreen
                 self.navigationController?.pushViewController(sixthVC, animated: true)
+    }
+    
+    let image = ScanScreen.photoOutput
+    
+    private func recognizeText(image: UIImage?) {
+        guard let cgImage = image?.cgImage else {return}
+        
+        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+        
+        let request = VNRecognizeTextRequest { [weak self] request, error in
+            guard let observations = request.results as? [VNRecognizedTextObservation],
+                  error == nil else {
+                return
+            }
+            let text = observations.compactMap({
+                $0.topCandidates(1).first?.string
+            }).joined(separator: ", ")
+        }
+        
+        do {
+            try handler.perform([request])
+        }
+        catch{
+            print(error)
+        }
     }
 }
