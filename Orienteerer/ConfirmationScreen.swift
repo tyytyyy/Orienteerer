@@ -9,10 +9,17 @@ import UIKit
 import Vision
 
 class ConfirmationScreen: UIViewController {
+    
+    var image: UIImage!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ScanScreen") as! ScanScreen
+                self.navigationController?.pushViewController(secondVC, animated: true)
+        //Image (hopefully)
+        image = secondVC.returnPhoto()
+        
     }
     @IBAction func RetakePicture(_ sender: Any) {
         let fifthVC = self.storyboard?.instantiateViewController(withIdentifier: "ScanScreen") as! ScanScreen
@@ -23,28 +30,6 @@ class ConfirmationScreen: UIViewController {
                 self.navigationController?.pushViewController(sixthVC, animated: true)
     }
     
-    let image = ScanScreen.photoOutput
     
-    private func recognizeText(image: UIImage?) {
-        guard let cgImage = image?.cgImage else {return}
-        
-        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
-        
-        let request = VNRecognizeTextRequest { [weak self] request, error in
-            guard let observations = request.results as? [VNRecognizedTextObservation],
-                  error == nil else {
-                return
-            }
-            let text = observations.compactMap({
-                $0.topCandidates(1).first?.string
-            }).joined(separator: ", ")
-        }
-        
-        do {
-            try handler.perform([request])
-        }
-        catch{
-            print(error)
-        }
-    }
+    
 }

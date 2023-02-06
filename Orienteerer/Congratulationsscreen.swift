@@ -10,14 +10,14 @@ import ConfettiSwiftUI
 class Congratulationsscreen: UIViewController {
 
     override func viewDidLoad() {
-        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ScanScreen") as! ScanScreen
+        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmationScreen") as! ConfirmationScreen
         let seconds = 3.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.navigationController?.pushViewController(secondVC, animated: true)
             
-                let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ScanScreen") as! ScanScreen
         }
         super.viewDidLoad()
+        
         
     }
     

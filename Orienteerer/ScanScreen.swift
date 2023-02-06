@@ -9,38 +9,16 @@ import UIKit
 import AVFoundation
 
 class ScanScreen: UIViewController {
-    /*
-    var scannerAvailable: Bool {
-        DataScannerViewController.isSupported && DataScannerViewController.isAvailable
-    }
+   
     
-    override func viewDidLoad() {
-        
-    }
-    
-    @IBAction func ScanButton(_ sender: Any) {
-        let viewController = DataScannerViewController(
-            recognizedDataTypes: [.text()],
-            qualityLevel: .balanced,
-            recognizesMultipleItems: true,
-            isHighFrameRateTrackingEnabled: false,
-            isHighlightingEnabled: true)
-        present(viewController, animated: true){
-            try? viewController.startScanning()
-        }
-        var items: AsyncStream<[RecognizedItem]>
-        
-    }
-    */
     var session: AVCaptureSession?
     let output = AVCapturePhotoOutput()
     let previewLayer = AVCaptureVideoPreviewLayer()
     @IBOutlet weak var cameraView: UIImageView!
-    
     @IBOutlet weak var scanSign: UILabel!
     @IBOutlet weak var shutterButton: UIButton!
+    var image: UIImage!
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         view.backgroundColor = .black
         view.layer.addSublayer(previewLayer)
@@ -49,6 +27,7 @@ class ScanScreen: UIViewController {
         checkCameraPermissions()
         // Do any additional setup after loading the view.
     }
+    
     
     
     override func viewDidLayoutSubviews() {
@@ -78,6 +57,7 @@ class ScanScreen: UIViewController {
         }
     }
     
+    
     private func setUpCamera() {
         let session = AVCaptureSession()
         if let device = AVCaptureDevice.default(for: .video) {
@@ -101,10 +81,16 @@ class ScanScreen: UIViewController {
         }
     }
     
-    @IBAction func takePhoto(_ sender: Any) {
+    public func returnPhoto() -> UIImage? {
+        return image
+    }
+    
+    @IBAction func takePhoto(_ sender: Any){
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-        let fourthVC = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmationScreen") as! ConfirmationScreen
-        self.navigationController?.pushViewController(fourthVC, animated: true)
+        guard let navigationController = self.navigationController else { return }
+        var navigationArray = navigationController.viewControllers // To get all UIViewController stack as Array
+        navigationArray.remove(at: navigationArray.count - 1) // To remove previous UIViewController
+        self.navigationController?.viewControllers = navigationArray
     }
 }
 
@@ -114,7 +100,9 @@ extension ScanScreen: AVCapturePhotoCaptureDelegate {
             return
         }
         // results are saved in image variable below
-        let image = UIImage(data: data)
+        image = UIImage(data: data)
+        
+        
         session?.stopRunning()
     }
 }
