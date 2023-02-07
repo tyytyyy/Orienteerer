@@ -84,7 +84,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="lBb-ij-v4g">
                                 <rect key="frame" x="137.66666666666666" y="641" width="114.66666666666666" height="149"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnH-4v-0k8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9X3-Wo-912">
                                         <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="61"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -99,8 +99,8 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="StopButton:" destination="nIh-er-4r7" eventType="touchUpInside" id="KVI-wP-SqE"/>
-                                            <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xO6-za-jt1"/>
+                                            <action selector="StopButton:" destination="nIh-er-4r7" eventType="touchUpInside" id="h9i-lr-mbL"/>
+                                            <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKn-uO-kXg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-ah-jcO">
@@ -123,9 +123,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="gnH-4v-0k8" firstAttribute="height" secondItem="Uoa-ah-jcO" secondAttribute="height" id="EK1-DY-mwd"/>
-                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="yCd-sE-VVr">
                                 <rect key="frame" x="59.000000000000014" y="72" width="215.33333333333337" height="428"/>

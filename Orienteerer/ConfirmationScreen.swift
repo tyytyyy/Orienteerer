@@ -10,15 +10,21 @@ import Vision
 
 class ConfirmationScreen: UIViewController {
     
-    var image: UIImage!
-    var CIIMAGE: CIImage!
+    var image1: UIImage!
     var cgImage: CGImage!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ScanScreen") as! ScanScreen
-                self.navigationController?.pushViewController(secondVC, animated: true)
-        //Image (hopefully)
-        image = secondVC.returnPhoto()
+        image1 = ScanScreen.image
+        cgImage = UIImage(named: "image1")?.cgImage
+    }
+    
+    
+    
+    func runtxtrec(){
+        guard let navigationController = self.navigationController else { return }
+        var navigationArray = navigationController.viewControllers // To get all UIViewController stack as Array
+        navigationArray.remove(at: navigationArray.count - 1) // To remove previous UIViewController
+        self.navigationController?.viewControllers = navigationArray
         cgImage = UIImage(named: "image")?.cgImage
         let requestHandler = VNImageRequestHandler(cgImage: cgImage)
 
@@ -45,7 +51,12 @@ class ConfirmationScreen: UIViewController {
         }
         
         // Process the recognized strings.
+        
     }
+    
+    
+    
+    
     
     @IBAction func RetakePicture(_ sender: Any) {
         let fifthVC = self.storyboard?.instantiateViewController(withIdentifier: "ScanScreen") as! ScanScreen

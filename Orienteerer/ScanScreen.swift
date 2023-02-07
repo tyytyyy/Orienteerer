@@ -10,14 +10,13 @@ import AVFoundation
 
 class ScanScreen: UIViewController {
    
-    
+    static var image: UIImage!
     var session: AVCaptureSession?
     let output = AVCapturePhotoOutput()
     let previewLayer = AVCaptureVideoPreviewLayer()
     @IBOutlet weak var cameraView: UIImageView!
     @IBOutlet weak var scanSign: UILabel!
     @IBOutlet weak var shutterButton: UIButton!
-    var image: UIImage!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
@@ -81,17 +80,12 @@ class ScanScreen: UIViewController {
         }
     }
     
-    public func returnPhoto() -> UIImage? {
-        return image
-    }
-    
     @IBAction func takePhoto(_ sender: Any){
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-        guard let navigationController = self.navigationController else { return }
-        var navigationArray = navigationController.viewControllers // To get all UIViewController stack as Array
-        navigationArray.remove(at: navigationArray.count - 1) // To remove previous UIViewController
-        self.navigationController?.viewControllers = navigationArray
+        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmationScreen") as! ConfirmationScreen
+                self.navigationController?.pushViewController(secondVC, animated: true)
     }
+    
 }
 
 extension ScanScreen: AVCapturePhotoCaptureDelegate {
@@ -100,7 +94,8 @@ extension ScanScreen: AVCapturePhotoCaptureDelegate {
             return
         }
         // results are saved in image variable below
-        image = UIImage(data: data)
+        ScanScreen.image = UIImage(data: data)
+        
         
         
         session?.stopRunning()
