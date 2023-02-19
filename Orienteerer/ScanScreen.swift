@@ -1,4 +1,5 @@
-//
+
+
 //  ScanScreen.swift
 //  Orienteerer
 //
@@ -82,8 +83,6 @@ class ScanScreen: UIViewController {
     
     @IBAction func takePhoto(_ sender: Any){
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmationScreen") as! ConfirmationScreen
-                self.navigationController?.pushViewController(secondVC, animated: true)
     }
     
 }
@@ -94,10 +93,13 @@ extension ScanScreen: AVCapturePhotoCaptureDelegate {
             return
         }
         // results are saved in image variable below
-        ScanScreen.image = UIImage(data: data)
-        
-        
+        let image1 = UIImage(data: data)
+        ScanScreen.image = image1
         
         session?.stopRunning()
+        if(ScanScreen.image != nil){
+            let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmationScreen") as! ConfirmationScreen
+            self.navigationController?.pushViewController(secondVC, animated: true)
+        }
     }
 }

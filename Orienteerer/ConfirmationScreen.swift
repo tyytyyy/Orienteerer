@@ -1,3 +1,4 @@
+
 //
 //  ConfirmationScreen.swift
 //  Orienteerer
@@ -8,25 +9,60 @@
 import UIKit
 import Vision
 
+
 class ConfirmationScreen: UIViewController {
+    
+    private let label: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
+    }()
+    
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "example1")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        imageView.frame = CGRect(x:20, y: view.safeAreaInsets.top, width: view.frame.size.width-40, height: view.frame.size.width-40)
+        label.frame = CGRect(x: 20, y:view.frame.size.width+view.safeAreaInsets.top, width: view.frame.size.width-40, height: 200)
+    }
     
     var image1: UIImage!
     var cgImage: CGImage!
     override func viewDidLoad() {
+        print("ehoaiwjhoiejawe")
         super.viewDidLoad()
-        image1 = ScanScreen.image
-        cgImage = UIImage(named: "image1")?.cgImage
+        view.addSubview(label)
+        view.addSubview(imageView)
+        if(ScanScreen.image==nil){
+            print("AWEOAWIOEJOA      WIJEWOAMIDWAMIDx")
+        }
+        image1 = ScanScreen.image!
+        let ciImage = CIImage(image: image1)!
+        let ciContext = CIContext(options: nil)
+        let cgImage = ciContext.createCGImage(ciImage, from: ciImage.extent)
+
+        if(image1==nil){
+            print("AWEOAWIOEJOA      WIJEWOAMIDWAMIDx")
+        }
+        if(cgImage==nil){
+            print("AWEOAWIOEJOA      WIJEWOAMIDWAMIDx")
+        }
+        runtxtrec(cgimage: cgImage!)
     }
     
     
-    
-    func runtxtrec(){
+    func runtxtrec(cgimage: CGImage){
         guard let navigationController = self.navigationController else { return }
         var navigationArray = navigationController.viewControllers // To get all UIViewController stack as Array
         navigationArray.remove(at: navigationArray.count - 1) // To remove previous UIViewController
         self.navigationController?.viewControllers = navigationArray
-        cgImage = UIImage(named: "image")?.cgImage
-        let requestHandler = VNImageRequestHandler(cgImage: cgImage)
+        let requestHandler = VNImageRequestHandler(cgImage: cgimage)
 
         // Create a new request to recognize text.
         let request = VNRecognizeTextRequest(completionHandler: recognizeTextHandler)
@@ -48,12 +84,12 @@ class ConfirmationScreen: UIViewController {
         let recognizedStrings = observations.compactMap { observation in
             // Return the string of the top VNRecognizedText instance.
             return observation.topCandidates(1).first?.string
+        }.joined(separator:", ")
+        
+        DispatchQueue.main.async{
+            self.label.text = recognizedStrings
         }
-        
-        // Process the recognized strings.
-        
     }
-    
     
     
     
