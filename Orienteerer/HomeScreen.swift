@@ -10,18 +10,18 @@ import HealthKit
  
  
 class HomeScreen: UIViewController{
-    private var healthStore:HealthStore? = HealthStore()
+    public var newHealthStore:HealthStore = HealthStore()
     
-  
-    
+    public func getAccess() -> HealthStore{
+        return newHealthStore
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let healthStore = healthStore{
-            healthStore.requestAuthorization{success in
+        newHealthStore.requestAuthorization{success in
                 
-            }
         }
+        
         // Do any additional setup after loading the view.
         
  

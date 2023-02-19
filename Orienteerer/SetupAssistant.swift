@@ -10,10 +10,15 @@ import UIKit
 import HealthKit
 class HealthStore{
     var healthStore:HKHealthStore? //creates variable healthStore of type HKHealthStore
-    
+    var heartRate:Double = 0.0
+    var distance: Double = 0.0
+    var pace: Double = 0.0
     init(){ //initializes healthStore as HKHealthStore() if HKHealthStore is available
         if HKHealthStore.isHealthDataAvailable(){
             healthStore = HKHealthStore()
+            heartRate = 0.0
+            distance = 0.0
+            pace = 0.0
         }
     }
     
@@ -30,7 +35,7 @@ class HealthStore{
         
     }
     
-    func getHeartRate(){
+    func setNewHeartRate(){
         guard let sampleType = HKObjectType.quantityType(forIdentifier: .heartRate) else{
             return
         }
@@ -41,8 +46,64 @@ class HealthStore{
             guard error == nil else{
                 return
             }
+            let data = result![0] as! HKQuantitySample
+            let unit = HKUnit(from: "count/min")
+            self.heartRate = data.quantity.doubleValue(for: unit)
+            let dateFormator = DateFormatter()
+            dateFormator.dateFormat = "dd/MM/yyyy hh:mm s"
         }
         healthStore?.execute(query)
     }
- 
+    
+    func getNewHeartRate() -> Double{
+        return self.heartRate
+    }
+    
+    func setNewDistance(){
+        guard let sampleType = HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning) else{
+            return
+        }
+        let startDate = Calendar.current.date(byAdding: .month, value: -1, to: Date())
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options:.strictEndDate)
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        let query = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: Int(HKObjectQueryNoLimit), sortDescriptors: [sortDescriptor]) {(sample, result, error) in
+            guard error == nil else{
+                return
+            }
+            let data = result![0] as! HKQuantitySample
+            let unit = HKUnit(from: "count/min")
+            self.heartRate = data.quantity.doubleValue(for: unit)
+            let dateFormator = DateFormatter()
+            dateFormator.dateFormat = "dd/MM/yyyy hh:mm s"
+        }
+        healthStore?.execute(query)
+    }
+    
+    func getNewDistance() -> Double{
+        return self.distance
+    }
+    
+    func setNewPace(){
+        guard let sampleType = HKObjectType.quantityType(forIdentifier: .runningSpeed) else{
+            return
+        }
+        let startDate = Calendar.current.date(byAdding: .month, value: -1, to: Date())
+        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options:.strictEndDate)
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        let query = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: Int(HKObjectQueryNoLimit), sortDescriptors: [sortDescriptor]) {(sample, result, error) in
+            guard error == nil else{
+                return
+            }
+            let data = result![0] as! HKQuantitySample
+            let unit = HKUnit(from: "count/min")
+            self.pace = data.quantity.doubleValue(for: unit)
+            let dateFormator = DateFormatter()
+            dateFormator.dateFormat = "dd/MM/yyyy hh:mm s"
+        }
+        healthStore?.execute(query)
+    }
+    
+    func getNewPace() -> Double{
+        return self.pace
+    }
 }

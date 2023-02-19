@@ -7,14 +7,60 @@
 
 import UIKit
 
-class InProcessScreen: UIViewController {
+class InProcessScreen:UIViewController{
 
+    @IBOutlet var heartrateLabel: UILabel!
+    @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var paceLabel: UILabel!
+    var time:Int = 0
+    let onesecond = 1.0
+    var ownHealthStore:HealthStore = HomeScreen().getAccess()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        time = 0
+        ownHealthStore = HomeScreen().getAccess()
+        self.updateHeartRate()
+        self.updateDistance()
+        self.updatePace()
+        self.updateTime()
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updating), userInfo: nil, repeats: true)
+        
         // Do any additional setup after loading the view.
     }
     
+    @objc func updating(){
+        self.updateHeartRate()
+        self.updateDistance()
+        self.updatePace()
+        setTime()
+        self.updateTime()
+    }
+    
+    func setTime(){
+        self.time = self.time + 1
+    }
+    
+    func updateTime(){
+        timeLabel.text = String(time)
+    }
+    
+    func updateHeartRate(){
+        ownHealthStore = HomeScreen().getAccess()
+        heartrateLabel.text = String(ownHealthStore.getNewHeartRate())
+    }
+    
+    func updateDistance(){
+        ownHealthStore = HomeScreen().getAccess()
+        distanceLabel.text = String(ownHealthStore.getNewDistance())
+    }
+    
+    func updatePace(){
+        ownHealthStore = HomeScreen().getAccess()
+        paceLabel.text = String(ownHealthStore.getNewPace())
+    }
+
     @IBAction func StopButton(_ sender: Any) {
         let ninthVC = self.storyboard?.instantiateViewController(withIdentifier: "EndScreenTwo") as! EndScreenTwo
                 self.navigationController?.pushViewController(ninthVC, animated: true)
@@ -24,6 +70,7 @@ class InProcessScreen: UIViewController {
         let thirdVC = self.storyboard?.instantiateViewController(withIdentifier: "CongratulationsScreen") as! Congratulationsscreen
                 self.navigationController?.pushViewController(thirdVC, animated: true)
     }
+    
     
     /*
     // MARK: - Navigation
