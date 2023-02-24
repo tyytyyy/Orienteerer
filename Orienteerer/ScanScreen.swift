@@ -83,6 +83,7 @@ class ScanScreen: UIViewController {
     
     @IBAction func takePhoto(_ sender: Any){
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+        
     }
     
 }
@@ -97,9 +98,10 @@ extension ScanScreen: AVCapturePhotoCaptureDelegate {
         ScanScreen.image = image1
         
         session?.stopRunning()
-        if(ScanScreen.image != nil){
-            let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmationScreen") as! ConfirmationScreen
-            self.navigationController?.pushViewController(secondVC, animated: true)
-        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let secondVC = storyboard.instantiateViewController(identifier: "ConfirmationScreen")
+
+            show(secondVC, sender: self)
     }
 }

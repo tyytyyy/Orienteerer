@@ -35,33 +35,19 @@ class ConfirmationScreen: UIViewController {
     var image1: UIImage!
     var cgImage: CGImage!
     override func viewDidLoad() {
-        print("ehoaiwjhoiejawe")
         super.viewDidLoad()
         view.addSubview(label)
         view.addSubview(imageView)
-        if(ScanScreen.image==nil){
-            print("AWEOAWIOEJOA      WIJEWOAMIDWAMIDx")
-        }
         image1 = ScanScreen.image!
         let ciImage = CIImage(image: image1)!
         let ciContext = CIContext(options: nil)
         let cgImage = ciContext.createCGImage(ciImage, from: ciImage.extent)
 
-        if(image1==nil){
-            print("AWEOAWIOEJOA      WIJEWOAMIDWAMIDx")
-        }
-        if(cgImage==nil){
-            print("AWEOAWIOEJOA      WIJEWOAMIDWAMIDx")
-        }
         runtxtrec(cgimage: cgImage!)
     }
     
     
     func runtxtrec(cgimage: CGImage){
-        guard let navigationController = self.navigationController else { return }
-        var navigationArray = navigationController.viewControllers // To get all UIViewController stack as Array
-        navigationArray.remove(at: navigationArray.count - 1) // To remove previous UIViewController
-        self.navigationController?.viewControllers = navigationArray
         let requestHandler = VNImageRequestHandler(cgImage: cgimage)
 
         // Create a new request to recognize text.
