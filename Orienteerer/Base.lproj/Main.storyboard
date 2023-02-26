@@ -55,6 +55,26 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hr9-2R-IfW">
+                                <rect key="frame" x="107.33333333333333" y="604" width="175.33333333333337" height="61"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Scan Slip">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="36" name="Futura-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgn-P8-psn"/>
+                                    <action selector="scanScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgH-x7-NAu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,6 +82,8 @@
                             <constraint firstItem="iw6-tS-vso" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CYc-OD-X39"/>
                             <constraint firstItem="Rw1-z1-34w" firstAttribute="top" secondItem="iw6-tS-vso" secondAttribute="bottom" constant="86" id="LBY-CU-5gV"/>
                             <constraint firstItem="Vth-xT-LRV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tnw-fJ-oYQ"/>
+                            <constraint firstItem="hr9-2R-IfW" firstAttribute="top" secondItem="Vth-xT-LRV" secondAttribute="bottom" constant="34" id="WEk-Ur-SaI"/>
+                            <constraint firstItem="hr9-2R-IfW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yaz-Lp-ZLN"/>
                             <constraint firstItem="Rw1-z1-34w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cAn-kA-PUz"/>
                             <constraint firstItem="Rw1-z1-34w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hl1-vq-rqJ"/>
                             <constraint firstItem="Vth-xT-LRV" firstAttribute="top" secondItem="Rw1-z1-34w" secondAttribute="bottom" constant="87" id="ykN-hS-JYr"/>

@@ -31,6 +31,10 @@ class HomeScreen: UIViewController{
         let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "InProcessScreen") as! InProcessScreen
                 self.navigationController?.pushViewController(secondVC, animated: true)
     }
+    @IBAction func scanScreen(_ sender: Any) {
+        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "ScanScreen") as! ScanScreen
+                self.navigationController?.pushViewController(secondVC, animated: true)
+    }
     
 }
  
