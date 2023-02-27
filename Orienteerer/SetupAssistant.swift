@@ -9,17 +9,14 @@
 import UIKit
 import HealthKit
 class HealthStore{
-    var healthStore:HKHealthStore? //creates variable healthStore of type HKHealthStore
+    let healthStore = HKHealthStore() //creates variable healthStore of type HKHealthStore
     var heartRate:Double = 0.0
     var distance: Double = 0.0
     var pace: Double = 0.0
     init(){ //initializes healthStore as HKHealthStore() if HKHealthStore is available
-        if HKHealthStore.isHealthDataAvailable(){
-            healthStore = HKHealthStore()
-            heartRate = 0.0
-            distance = 0.0
-            pace = 0.0
-        }
+        heartRate = 0.0
+        distance = 0.0
+        pace = 0.0
     }
     
     func requestAuthorization(completion: @escaping (Bool) -> Void){ //requests authorization once, need to change what is needed
@@ -28,7 +25,6 @@ class HealthStore{
                             HKObjectType.quantityType(forIdentifier: .distanceCycling)!,
                             HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!,
                             HKObjectType.quantityType(forIdentifier: .heartRate)!])
-        guard let healthStore = self.healthStore else { return completion(false)}
         healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
             completion(success)
         }
@@ -43,44 +39,35 @@ class HealthStore{
         let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options:.strictEndDate)
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
         let query = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: Int(HKObjectQueryNoLimit), sortDescriptors: [sortDescriptor]) {(sample, result, error) in
-            guard error == nil else{
-                return
-            }
-            let data = result![0] as! HKQuantitySample
+            guard let result = result else { return } //result is []
+            let data = result[0] as! HKQuantitySample
             let unit = HKUnit(from: "count/min")
             self.heartRate = data.quantity.doubleValue(for: unit)
-            let dateFormator = DateFormatter()
-            dateFormator.dateFormat = "dd/MM/yyyy hh:mm s"
         }
-        healthStore?.execute(query)
-    }
-    
-    func getNewHeartRate() -> Double{
-        return self.heartRate
+        healthStore.execute(query)
     }
     
     func setNewDistance(){
-        guard let sampleType = HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning) else{
-            return
+        guard let type = HKSampleType.quantityType(forIdentifier: .distanceWalkingRunning) else {
+            fatalError("Something went wrong retrieving quantity type distanceWalkingRunning")
         }
-        let startDate = Calendar.current.date(byAdding: .month, value: -1, to: Date())
-        let predicate = HKQuery.predicateForSamples(withStart: startDate, end: Date(), options:.strictEndDate)
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        let query = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: Int(HKObjectQueryNoLimit), sortDescriptors: [sortDescriptor]) {(sample, result, error) in
-            guard error == nil else{
-                return
+        let date =  Date()
+        let cal = Calendar(identifier: Calendar.Identifier.gregorian)
+        let newDate = cal.startOfDay(for: date)
+
+        let predicate = HKQuery.predicateForSamples(withStart: newDate, end: Date(), options: .strictStartDate)
+
+        let query = HKStatisticsQuery(quantityType: type, quantitySamplePredicate: predicate, options: [.cumulativeSum]) { (query, statistics, error) in
+            var value: Double = 0
+
+            if error != nil {
+                print("something went wrong")
+            } else if let quantity = statistics?.sumQuantity() {
+                value = quantity.doubleValue(for: HKUnit.mile())
+                self.distance = value
             }
-            let data = result![0] as! HKQuantitySample
-            let unit = HKUnit(from: "count/min")
-            self.heartRate = data.quantity.doubleValue(for: unit)
-            let dateFormator = DateFormatter()
-            dateFormator.dateFormat = "dd/MM/yyyy hh:mm s"
         }
-        healthStore?.execute(query)
-    }
-    
-    func getNewDistance() -> Double{
-        return self.distance
+        healthStore.execute(query)
     }
     
     func setNewPace(){
@@ -97,13 +84,21 @@ class HealthStore{
             let data = result![0] as! HKQuantitySample
             let unit = HKUnit(from: "count/min")
             self.pace = data.quantity.doubleValue(for: unit)
-            let dateFormator = DateFormatter()
-            dateFormator.dateFormat = "dd/MM/yyyy hh:mm s"
         }
-        healthStore?.execute(query)
+        healthStore.execute(query)
     }
     
+     func getNewDistance() -> Double{
+         return self.distance
+     }
+     
     func getNewPace() -> Double{
         return self.pace
     }
+     
+    func getNewHeartRate() -> Double{
+        return self.heartRate
+    }
+    
+    
 }

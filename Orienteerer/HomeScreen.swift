@@ -10,7 +10,7 @@ import HealthKit
  
  
 class HomeScreen: UIViewController{
-    public var newHealthStore:HealthStore = HealthStore()
+    private var newHealthStore:HealthStore = HealthStore()
     
     public func getAccess() -> HealthStore{
         return newHealthStore
@@ -20,8 +20,7 @@ class HomeScreen: UIViewController{
         super.viewDidLoad()
         newHealthStore.requestAuthorization{success in
                 
-        }
-        
+        }        
         // Do any additional setup after loading the view.
         
  

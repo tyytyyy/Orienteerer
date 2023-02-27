@@ -31,6 +31,7 @@ class InProcessScreen:UIViewController{
     }
     
     @objc func updating(){
+        ownHealthStore = HomeScreen().getAccess()
         self.updateHeartRate()
         self.updateDistance()
         self.updatePace()
@@ -47,17 +48,14 @@ class InProcessScreen:UIViewController{
     }
     
     func updateHeartRate(){
-        ownHealthStore = HomeScreen().getAccess()
         heartrateLabel.text = String(ownHealthStore.getNewHeartRate())
     }
     
     func updateDistance(){
-        ownHealthStore = HomeScreen().getAccess()
         distanceLabel.text = String(ownHealthStore.getNewDistance())
     }
     
     func updatePace(){
-        ownHealthStore = HomeScreen().getAccess()
         paceLabel.text = String(ownHealthStore.getNewPace())
     }
 
