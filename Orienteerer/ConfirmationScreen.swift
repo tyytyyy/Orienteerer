@@ -70,11 +70,50 @@ class ConfirmationScreen: UIViewController {
         let recognizedStrings = observations.compactMap { observation in
             // Return the string of the top VNRecognizedText instance.
             return observation.topCandidates(1).first?.string
-        }.joined(separator:", ")
-        
-        DispatchQueue.main.async{
-            self.label.text = recognizedStrings
         }
+        var y = 100
+        var x = 50
+        var count = 0
+        for i in recognizedStrings{
+            if(i.contains("(")&&i.contains(")")){
+                let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 24))
+                label.center = CGPoint(x: x, y: y)
+                label.textAlignment = .center
+                label.text = i
+                label.font = UIFont(name:"Futura-Medium", size:24)
+                self.view.addSubview(label)
+                y = y+50
+                if(y>800){
+                    y = 100
+                    x+=200
+                }
+                count+=1
+            }
+        }
+        x = 150
+        y = 100
+        var count2 = -1
+        for i in recognizedStrings{
+            if(i.contains(":")){
+                if(count2>0&&count2%2==1){
+                    let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 24))
+                    label.center = CGPoint(x: x, y: y)
+                    label.textAlignment = .center
+                    label.text = i
+                    label.font = UIFont(name:"Futura-Medium", size:24)
+                    self.view.addSubview(label)
+                    y = y+50
+                    if(y>800){
+                        y = 100
+                        x+=200
+                    }
+                    print(count2)
+                }
+                count2+=1
+                
+            }
+        }
+        
     }
     
     
