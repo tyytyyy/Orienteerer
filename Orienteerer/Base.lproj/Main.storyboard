@@ -17,18 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vth-xT-LRV">
-                                <rect key="frame" x="108" y="509" width="174" height="61"/>
+                                <rect key="frame" x="133" y="508.99999999999994" width="124" height="45.333333333333314"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Start Run">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="filled" title="Start Run">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FwH-vE-Xj9"/>
@@ -56,19 +49,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hr9-2R-IfW">
-                                <rect key="frame" x="107.33333333333333" y="604" width="175.33333333333337" height="61"/>
+                                <rect key="frame" x="132.66666666666666" y="588.33333333333337" width="124.99999999999997" height="45.333333333333371"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Scan Slip">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="filled" title="Scan Slip">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgn-P8-psn"/>
@@ -78,6 +63,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="iw6-tS-vso" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CYc-OD-X39"/>
                             <constraint firstItem="Rw1-z1-34w" firstAttribute="top" secondItem="iw6-tS-vso" secondAttribute="bottom" constant="86" id="LBY-CU-5gV"/>
@@ -104,40 +90,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="lBb-ij-v4g">
-                                <rect key="frame" x="137.66666666666666" y="641" width="114.66666666666666" height="149"/>
+                                <rect key="frame" x="153" y="672.33333333333337" width="84.333333333333314" height="117.66666666666663"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9X3-Wo-912">
-                                        <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="61"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joe-NH-sXd">
+                                        <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="45.333333333333336"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Stop">
-                                                    <attributes>
-                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="Stop">
+                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="StopButton:" destination="nIh-er-4r7" eventType="touchUpInside" id="h9i-lr-mbL"/>
-                                            <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKn-uO-kXg"/>
+                                            <action selector="StopButton:" destination="nIh-er-4r7" eventType="touchUpInside" id="Rgq-mP-wiA"/>
+                                            <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ps-U0-cPe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoa-ah-jcO">
-                                        <rect key="frame" x="0.0" y="88" width="114.66666666666667" height="61"/>
+                                        <rect key="frame" x="0.0" y="72.333333333333258" width="84.333333333333329" height="45.333333333333343"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Finish">
-                                                    <attributes>
-                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="Finish">
+                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="FinishButton:" destination="nIh-er-4r7" eventType="touchUpInside" id="EDR-GY-0cQ"/>
@@ -429,15 +401,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.insert" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eT2-d8-zaP">
-                                <rect key="frame" x="107" y="186.33333333333337" width="176" height="195.99999999999994"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="text.insert" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eT2-d8-zaP">
+                                <rect key="frame" x="107" y="186.3333333333334" width="176" height="195.99999999999997"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="RMZ-r9-7lW"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="hxK-cD-fv2"/>
                                     <constraint firstAttribute="width" constant="176" id="vro-7K-PTO"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ko3-mo-if8">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ko3-mo-if8">
                                 <rect key="frame" x="25.333333333333343" y="72" width="339.33333333333326" height="72"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Title Your Run:">
@@ -450,72 +422,53 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="fEO-Qo-nzN">
-                                <rect key="frame" x="55" y="475" width="195" height="210"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="fEO-Qo-nzN">
+                                <rect key="frame" x="55" y="475" width="195" height="225.66666666666674"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Time Elapsed:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEH-YU-JXf">
-                                        <rect key="frame" x="0.0" y="0.0" width="195" height="36"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Time Elapsed:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEH-YU-JXf">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="51.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Distance Traveled:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQg-fq-dQc">
-                                        <rect key="frame" x="0.0" y="87" width="195" height="36"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Distance Traveled:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQg-fq-dQc">
+                                        <rect key="frame" x="0.0" y="102.66666666666663" width="195" height="36"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Average Pace:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ry-d9-vZe">
-                                        <rect key="frame" x="0.0" y="174" width="195" height="36"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Average Pace:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ry-d9-vZe">
+                                        <rect key="frame" x="0.0" y="189.66666666666663" width="195" height="36"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAK-2z-n7i">
-                                <rect key="frame" x="58.666666666666657" y="731" width="272.66666666666674" height="61"/>
+                                <rect key="frame" x="86.666666666666671" y="746.66666666666663" width="216.66666666666663" height="45.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zIu-N3-OMh">
-                                        <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="61"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="45.333333333333336"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Done">
-                                                    <attributes>
-                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="Done">
+                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="ReturnHome:" destination="jbJ-jr-MJd" eventType="touchUpInside" id="SvO-gT-ncr"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="             " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zI-JW-84W">
-                                        <rect key="frame" x="111.6666666666667" y="0.0" width="56.666666666666671" height="61"/>
+                                        <rect key="frame" x="82.333333333333329" y="0.0" width="56.666666666666671" height="45.333333333333336"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKC-wr-Owu">
-                                        <rect key="frame" x="168.33333333333334" y="0.0" width="104.33333333333334" height="61"/>
+                                        <rect key="frame" x="139" y="0.0" width="77.666666666666686" height="45.333333333333336"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="S">
-                                                    <attributes>
-                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content="ave">
-                                                    <attributes>
-                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save">
+                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfJ-73-r1f"/>
@@ -571,59 +524,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xZu-XT-kgi">
-                                <rect key="frame" x="113" y="47" width="165" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QU7-zL-ukU">
+                                <rect key="frame" x="244" y="755" width="110" height="46"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Confirm">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ConfirmPicture:" destination="OKR-s7-bms" eventType="touchUpInside" id="f2y-ne-bhP"/>
+                                    <action selector="RetakePicture:" destination="OKR-s7-bms" eventType="touchUpInside" id="wB4-Qt-Gq2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3px-1L-2V7">
+                                <rect key="frame" x="195" y="708" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOJ-37-lBC">
-                                <rect key="frame" x="25" y="685" width="135" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9X3-Wo-912">
+                                <rect key="frame" x="50" y="755" width="98" height="46"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Retake">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="filled" title="Retake">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="RetakePicture:" destination="OKR-s7-bms" eventType="touchUpInside" id="Y9O-yX-Hig"/>
+                                    <action selector="RetakePicture:" destination="OKR-s7-bms" eventType="touchUpInside" id="xyE-sT-BuQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="cex-Vu-DPq">
-                                <rect key="frame" x="212" y="685" width="153" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Confirm">
-                                            <attributes>
-                                                <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ConfirmPicture:" destination="OKR-s7-bms" eventType="touchUpInside" id="B0G-D0-WJO"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjV-vU-Ca9">
+                                <rect key="frame" x="103" y="47" width="184" height="52"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Total Time">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="40" name="Futura-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kuu-9s-Dss"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QU7-zL-ukU" firstAttribute="leading" secondItem="3px-1L-2V7" secondAttribute="trailing" constant="49" id="Thd-Dk-mot"/>
+                            <constraint firstItem="3px-1L-2V7" firstAttribute="centerX" secondItem="jAn-Wc-eGa" secondAttribute="centerX" id="eaq-DH-98D"/>
+                            <constraint firstItem="3px-1L-2V7" firstAttribute="leading" secondItem="9X3-Wo-912" secondAttribute="trailing" constant="47" id="gpL-K0-cBm"/>
+                            <constraint firstItem="CjV-vU-Ca9" firstAttribute="top" secondItem="Kuu-9s-Dss" secondAttribute="top" id="jrB-8X-8s0"/>
+                            <constraint firstItem="Kuu-9s-Dss" firstAttribute="bottom" secondItem="QU7-zL-ukU" secondAttribute="bottom" constant="8" id="mx1-Cb-DI6"/>
+                            <constraint firstItem="CjV-vU-Ca9" firstAttribute="centerX" secondItem="jAn-Wc-eGa" secondAttribute="centerX" id="uAU-zV-H5A"/>
+                            <constraint firstItem="Kuu-9s-Dss" firstAttribute="bottom" secondItem="9X3-Wo-912" secondAttribute="bottom" constant="9" id="zrc-tG-C1S"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUU-Pg-aC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1018" y="-543"/>
+            <point key="canvasLocation" x="-1018.4615384615385" y="-543.12796208530801"/>
         </scene>
         <!--End Screen Two-->
         <scene sceneID="jse-d9-36k">
@@ -633,15 +593,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.insert" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YHb-WP-tPh">
-                                <rect key="frame" x="107" y="186.33333333333337" width="176" height="195.99999999999994"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="text.insert" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YHb-WP-tPh">
+                                <rect key="frame" x="107" y="186.3333333333334" width="176" height="195.99999999999997"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="TZL-cg-baA"/>
                                     <constraint firstAttribute="height" constant="200" id="YUp-en-ZEO"/>
                                     <constraint firstAttribute="width" constant="176" id="qoI-QR-qjO"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tHO-I0-D3G">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tHO-I0-D3G">
                                 <rect key="frame" x="25.333333333333343" y="72" width="339.33333333333326" height="72"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Title Your Run:">
@@ -654,72 +614,53 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="nyH-ub-jU3">
-                                <rect key="frame" x="55" y="475" width="195" height="210"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="nyH-ub-jU3">
+                                <rect key="frame" x="55" y="475" width="195" height="225.66666666666674"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Time Elapsed:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYs-G8-etj">
-                                        <rect key="frame" x="0.0" y="0.0" width="195" height="36"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Time Elapsed:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYs-G8-etj">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="51.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Distance Traveled:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIT-ha-dnn">
-                                        <rect key="frame" x="0.0" y="87" width="195" height="36"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Distance Traveled:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIT-ha-dnn">
+                                        <rect key="frame" x="0.0" y="102.66666666666663" width="195" height="36"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Average Pace:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wD-WY-6GZ">
-                                        <rect key="frame" x="0.0" y="174" width="195" height="36"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Average Pace:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wD-WY-6GZ">
+                                        <rect key="frame" x="0.0" y="189.66666666666663" width="195" height="36"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rh-4w-j9O">
-                                <rect key="frame" x="58.666666666666657" y="731" width="272.66666666666674" height="61"/>
+                                <rect key="frame" x="86.666666666666671" y="746.66666666666663" width="216.66666666666663" height="45.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUg-fP-9aA">
-                                        <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="61"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="45.333333333333336"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Done">
-                                                    <attributes>
-                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="Done">
+                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="ReturnHomeTwo:" destination="HhQ-iT-nM8" eventType="touchUpInside" id="tA5-28-zMy"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="             " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRq-xI-53s">
-                                        <rect key="frame" x="111.6666666666667" y="0.0" width="56.666666666666671" height="61"/>
+                                        <rect key="frame" x="82.333333333333329" y="0.0" width="56.666666666666671" height="45.333333333333336"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gA-GL-VEo">
-                                        <rect key="frame" x="168.33333333333334" y="0.0" width="104.33333333333334" height="61"/>
+                                        <rect key="frame" x="139" y="0.0" width="77.666666666666686" height="45.333333333333336"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="S">
-                                                    <attributes>
-                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                    </attributes>
-                                                </fragment>
-                                                <fragment content="ave">
-                                                    <attributes>
-                                                        <font key="NSFont" size="36" name="Futura-Medium"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save">
+                                            <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
