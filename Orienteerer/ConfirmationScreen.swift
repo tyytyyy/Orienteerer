@@ -36,6 +36,7 @@ class ConfirmationScreen: UIViewController {
     var cgImage: CGImage!
     var timelist: [UITextField] = []
     var inttimelist: [Int] = []
+    //timelist contains labels, inttimelist contains time in seconds
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(label)
@@ -164,7 +165,6 @@ class ConfirmationScreen: UIViewController {
     
     @objc func textFieldDidChange(_ label: UITextField) {
         let index = timelist.firstIndex(of: label)!
-        print("UWU")
         //maybe check if entered is valid time
         inttimelist[index] = converttoseconds(hours: label.text!)
     }
