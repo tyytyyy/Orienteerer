@@ -21,8 +21,7 @@ class HealthStore{
     
     func requestAuthorization(completion: @escaping (Bool) -> Void){ //requests authorization once, need to change what is needed
         let allTypes = Set([HKObjectType.workoutType(),
-                            HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
-                            HKObjectType.quantityType(forIdentifier: .distanceCycling)!,
+                            HKObjectType.quantityType(forIdentifier: .runningSpeed)!,
                             HKObjectType.quantityType(forIdentifier: .distanceWalkingRunning)!,
                             HKObjectType.quantityType(forIdentifier: .heartRate)!])
         healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in

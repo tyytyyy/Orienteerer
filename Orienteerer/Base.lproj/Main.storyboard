@@ -541,6 +541,35 @@
             </objects>
             <point key="canvasLocation" x="-355.38461538461536" y="133.64928909952607"/>
         </scene>
+        <!--Map Screen-->
+        <scene sceneID="bbT-gw-ghx">
+            <objects>
+                <viewController storyboardIdentifier="MapScreen" id="wGv-2G-oKP" customClass="MapScreen" customModule="Orienteerer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j86-EK-Q5P">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fL-Qx-0oV">
+                                <rect key="frame" x="221" y="642" width="65" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="FinishButton:" destination="wGv-2G-oKP" eventType="touchUpInside" id="SFe-mk-EsT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DgO-uI-pBp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="4fL-Qx-0oV" id="jc4-OO-50P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xfa-pn-Sxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-240" y="788.38862559241704"/>
+        </scene>
         <!--Confirmation Screen-->
         <scene sceneID="OZs-6p-kRX">
             <objects>

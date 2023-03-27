@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A066A0B295E410A007FF8EC /* InitializationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A066A0A295E410A007FF8EC /* InitializationScreen.swift */; };
 		0A066A14295E4959007FF8EC /* EndScreenTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A066A13295E4959007FF8EC /* EndScreenTwo.swift */; };
+		0A25E4CA29D113A500AE810D /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A25E4C929D113A500AE810D /* MapScreen.swift */; };
 		0A65918A2959121C00DCCBB6 /* ConfirmationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */; };
 		0AA65FED29650DFB00FE04AB /* SetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA65FEC29650DFB00FE04AB /* SetupAssistant.swift */; };
 		EC3069A82942F77600069B46 /* ScanScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3069A72942F77600069B46 /* ScanScreen.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		0A066A0A295E410A007FF8EC /* InitializationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationScreen.swift; sourceTree = "<group>"; };
 		0A066A13295E4959007FF8EC /* EndScreenTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndScreenTwo.swift; sourceTree = "<group>"; };
+		0A25E4C929D113A500AE810D /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		0A6591892959121C00DCCBB6 /* ConfirmationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationScreen.swift; sourceTree = "<group>"; };
 		0AA65FEC29650DFB00FE04AB /* SetupAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAssistant.swift; sourceTree = "<group>"; };
 		12591ED49178327DDE5A13F8 /* Pods-Orienteerer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Orienteerer.release.xcconfig"; path = "Target Support Files/Pods-Orienteerer/Pods-Orienteerer.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				EC37CFEF29186DB000F97ACE /* HomeScreen.swift */,
 				EC6BE9822941AEBF00694E32 /* InProcessScreen.swift */,
 				ECE53D3C29343F2500B301A1 /* Congratulationsscreen.swift */,
+				0A25E4C929D113A500AE810D /* MapScreen.swift */,
 				EC3069A72942F77600069B46 /* ScanScreen.swift */,
 				0A066A0A295E410A007FF8EC /* InitializationScreen.swift */,
 				ECE53D40293442A900B301A1 /* EndScreen.swift */,
@@ -421,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A25E4CA29D113A500AE810D /* MapScreen.swift in Sources */,
 				EC6BE9832941AEBF00694E32 /* InProcessScreen.swift in Sources */,
 				0AA65FED29650DFB00FE04AB /* SetupAssistant.swift in Sources */,
 				ECE53D3D29343F2600B301A1 /* Congratulationsscreen.swift in Sources */,
