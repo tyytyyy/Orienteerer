@@ -75,22 +75,31 @@ class ConfirmationScreen: UIViewController {
             return observation.topCandidates(1).first?.string
         }
         var y = 170
+        
         var x = 70
         var count = 0
         let height:Int = Int(UIScreen.main.bounds.height)
+        print(UIScreen.main.bounds.height)
+        print(UIScreen.main.bounds.height)
+        print(UIScreen.main.bounds.height)
+        print(UIScreen.main.bounds.height)
+        print(UIScreen.main.bounds.height)
+        print(UIScreen.main.bounds.height)
+        print(UIScreen.main.bounds.height)
+        print(UIScreen.main.bounds.height)
         for i in recognizedStrings{
             if(i.contains("(")&&i.contains(")")){
                 let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 24))
                 label.center = CGPoint(x: x, y: y)
                 label.textAlignment = .center
                 label.text = i
-                label.font = UIFont(name:"Futura-Medium", size:24)
+                label.font = UIFont(name:"Futura-Medium", size:UIScreen.main.bounds.width/17.91666667)
                 self.view.addSubview(label)
-                y = y+50
+                y = y+Int(UIScreen.main.bounds.height/18.64)
                 
                 if(y>height-100){
                     y = 170
-                    x+=200
+                    x+=Int(UIScreen.main.bounds.width/2.15)
                 }
                 count+=1
             }
@@ -119,14 +128,14 @@ class ConfirmationScreen: UIViewController {
             label.textAlignment = .center
             label.text = i
             label.returnKeyType = .done
-            label.font = UIFont(name:"Futura-Medium", size:24)
+            label.font = UIFont(name:"Futura-Medium", size:UIScreen.main.bounds.width/17.91666667)
             label.addTarget(self, action: #selector(ConfirmationScreen.textFieldDidChange(_:)), for: .editingChanged)
             self.view.addSubview(label)
             inttimelist.append(converttoseconds(hours: i))
-            y = y+50
+            y = y+Int(UIScreen.main.bounds.height/18.64)
             if(y>height-100){
                 y = 170
-                x+=200
+                x+=Int(UIScreen.main.bounds.width/2.15)
                 
             }
         }
