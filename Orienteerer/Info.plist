@@ -26,5 +26,7 @@
 		<string>location</string>
 		<string>processing</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow to see current location</string>
 </dict>
 </plist>
