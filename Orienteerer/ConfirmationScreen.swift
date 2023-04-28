@@ -8,7 +8,7 @@
 
 import UIKit
 import Vision
-
+import Foundation
 
 class ConfirmationScreen: UIViewController {
     
@@ -32,15 +32,28 @@ class ConfirmationScreen: UIViewController {
         label.frame = CGRect(x: 20, y:view.frame.size.width+view.safeAreaInsets.top, width: view.frame.size.width-40, height: 200)
     }
     
+    func increaseContrast(_ image: UIImage) -> UIImage {
+        let inputImage = CIImage(image: image)!
+        let parameters = [
+            "inputContrast": NSNumber(value: 2)
+        ]
+        let outputImage = inputImage.applyingFilter("CIColorControls", parameters: parameters)
+
+        let context = CIContext(options: nil)
+        let img = context.createCGImage(outputImage, from: outputImage.extent)!
+        return UIImage(cgImage: img)
+    }
+    
     var image1: UIImage!
     var cgImage: CGImage!
     var timelist: [UITextField] = []
     var inttimelist: [Int] = []
+    //timelist contains labels, inttimelist contains time in seconds
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(label)
         view.addSubview(imageView)
-        image1 = ScanScreen.image!
+        image1 = increaseContrast(ScanScreen.image!)
         let ciImage = CIImage(image: image1)!
         let ciContext = CIContext(options: nil)
         let cgImage = ciContext.createCGImage(ciImage, from: ciImage.extent)
@@ -74,34 +87,53 @@ class ConfirmationScreen: UIViewController {
             return observation.topCandidates(1).first?.string
         }
         var y = 170
+        
         var x = 70
         var count = 0
+        
+        var strlist = [String]()
+        var intlist = [Int]()
         let height:Int = Int(UIScreen.main.bounds.height)
+        var numvariables = 0
         for i in recognizedStrings{
             if(i.contains("(")&&i.contains(")")){
+                let t = i[...i.firstIndex(of: ")")!]
+                var time = String(i[i.firstIndex(of: ")")!...])
+                if(time.count>2){
+                    let index1 = time.index(time.startIndex, offsetBy: 2)
+                    time = String(time[index1...])
+                    print("aaa")
+                }
+                print(time)
+                if time.isNumeric && time.contains(":"){
+                    intlist.append(converttoseconds(hours: time))
+                    strlist.append(time)
+                }
                 let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 24))
                 label.center = CGPoint(x: x, y: y)
                 label.textAlignment = .center
-                label.text = i
-                label.font = UIFont(name:"Futura-Medium", size:24)
+                label.text = String(t)
+                label.font = UIFont(name:"Futura-Medium", size:UIScreen.main.bounds.width/17.91666667)
                 self.view.addSubview(label)
-                y = y+50
+                numvariables += 1
+                y = y+Int(UIScreen.main.bounds.height/18.64)
                 
                 if(y>height-100){
                     y = 170
-                    x+=200
+                    x+=Int(UIScreen.main.bounds.width/2.15)
                 }
                 count+=1
             }
         }
+        
+        
         x = 160
         y = 170
-        var strlist = [String]()
-        var intlist = [Int]()
         count = 0
+        
+        
         for i in recognizedStrings{
-            if(i.contains(":")&&count>0){
-                print(i)
+            if(i.contains(":")&&count>0&&i.isNumeric){
                 strlist.append(i)
                 intlist.append(converttoseconds(hours: i))
             }
@@ -118,15 +150,34 @@ class ConfirmationScreen: UIViewController {
             label.textAlignment = .center
             label.text = i
             label.returnKeyType = .done
-            label.font = UIFont(name:"Futura-Medium", size:24)
+            label.font = UIFont(name:"Futura-Medium", size:UIScreen.main.bounds.width/17.91666667)
             label.addTarget(self, action: #selector(ConfirmationScreen.textFieldDidChange(_:)), for: .editingChanged)
             self.view.addSubview(label)
             inttimelist.append(converttoseconds(hours: i))
-            y = y+50
+            y = y+Int(UIScreen.main.bounds.height/18.64)
             if(y>height-100){
                 y = 170
-                x+=200
+                x+=Int(UIScreen.main.bounds.width/2.15)
                 
+            }
+        }
+        if(newlist.count<count){
+            for _ in newlist.count...count{
+                let label = UITextField(frame: CGRect(x: 0, y: 0, width: 200, height: 24))
+                timelist.append(label)
+                label.center = CGPoint(x: x, y: y)
+                label.textAlignment = .center
+                label.text = ""
+                label.returnKeyType = .done
+                label.font = UIFont(name:"Futura-Medium", size:UIScreen.main.bounds.width/17.91666667)
+                label.addTarget(self, action: #selector(ConfirmationScreen.textFieldDidChange(_:)), for: .editingChanged)
+                self.view.addSubview(label)
+                y = y+Int(UIScreen.main.bounds.height/18.64)
+                if(y>height-100){
+                    y = 170
+                    x+=Int(UIScreen.main.bounds.width/2.15)
+                    
+                }
             }
         }
     }
@@ -136,21 +187,22 @@ class ConfirmationScreen: UIViewController {
             return []
         }
         var t = [String]()
-        print(list1.first)
         var lastelement = list1.first
         t.append(lastelement!)
+        
         for i in list1{
             if list2.contains(converttoseconds(hours: i)-converttoseconds(hours: lastelement)){
                 t.append(i)
                 lastelement = i
             }
+            
         }
         return t
     }
     
     func converttoseconds(hours: String?) -> Int!{
         if (hours==nil){
-            return 0;
+            return 10800;
         }
         let timesplit = hours!.split(separator: ":")
         var timeseconds = 0
@@ -164,7 +216,6 @@ class ConfirmationScreen: UIViewController {
     
     @objc func textFieldDidChange(_ label: UITextField) {
         let index = timelist.firstIndex(of: label)!
-        print("UWU")
         //maybe check if entered is valid time
         inttimelist[index] = converttoseconds(hours: label.text!)
     }
@@ -190,5 +241,12 @@ extension Int {
             return 0;
         }
         return k!
+    }
+}
+extension String {
+    var isNumeric: Bool {
+        guard self.count > 0 else { return false }
+        let nums: Set<Character> = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":"]
+        return Set(self).isSubset(of: nums)
     }
 }

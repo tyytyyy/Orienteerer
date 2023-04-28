@@ -615,7 +615,7 @@
 				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RRDJKF67A4;
+				DEVELOPMENT_TEAM = JF7BB9ZW8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -654,7 +654,7 @@
 				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RRDJKF67A4;
+				DEVELOPMENT_TEAM = JF7BB9ZW8A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
