@@ -613,9 +613,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JF7BB9ZW8A;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -623,6 +624,7 @@
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used for data analysis and data output at the end of run";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used for data analysis";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to update health data throughout run";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see current location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -634,8 +636,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TomYuan.Orienteerer;
+				PRODUCT_BUNDLE_IDENTIFIER = KevinYuan.Orienteerer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -652,9 +655,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Orienteerer/Orienteerer.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JF7BB9ZW8A;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Orienteerer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
@@ -662,6 +666,7 @@
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Used for data analysis and data output at the end of run";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Used for data analysis";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Used to update health data throughout run";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow to see current location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -673,8 +678,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TomYuan.Orienteerer;
+				PRODUCT_BUNDLE_IDENTIFIER = KevinYuan.Orienteerer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
