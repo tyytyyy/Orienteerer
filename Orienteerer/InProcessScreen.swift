@@ -16,37 +16,66 @@ class InProcessScreen:UIViewController, CLLocationManagerDelegate{
     @IBOutlet var paceLabel: UILabel!
     var time:Int = 0
     let onesecond = 1.0
+    let manager = CLLocationManager()
+    @IBOutlet var mapView: MKMapView!
+    static var transferrableMapView: MKMapView!
+    static var array_of_times = [Int]()
+    static var array_of_latitude = [Double]()
+    static var array_of_longitude = [Double]()
+    static var array_of_annotations = [MKPointAnnotation]()
     var ownHealthStore:HealthStore = HomeScreen().getAccess()
     override func viewDidLoad() {
         super.viewDidLoad()
         time = 0
         ownHealthStore = HomeScreen().getAccess()
-        self.updateHeartRate()
-        self.updateDistance()
-        self.updatePace()
-        self.updateTime()
-        HomeScreen().getAccess().manager.desiredAccuracy = kCLLocationAccuracyBest
-        HomeScreen().getAccess().manager.delegate = self
-        HomeScreen().getAccess().manager.requestWhenInUseAuthorization()
-        HomeScreen().getAccess().manager.startUpdatingLocation()
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.delegate = self
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        //self.updateHeartRate()
+        //self.updateDistance()
+        //self.updatePace()
+        //self.updateTime()
+        
         _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updating), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view.
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        render(location: locations.last!)
+    }
+    func render( location: CLLocation){
+        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+        let annotation1 = MKPointAnnotation()
+        annotation1.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        InProcessScreen.array_of_annotations.append(annotation1)
+        self.mapView.addAnnotation(annotation1)
+        InProcessScreen.transferrableMapView = mapView
+        InProcessScreen.array_of_times.append(time)
+        InProcessScreen.array_of_latitude.append(location.coordinate.latitude)
+        InProcessScreen.array_of_longitude.append(location.coordinate.longitude)
+    }
     
+    public func getMapView() -> MKMapView {
+        return mapView
+        
+    }
     @objc func updating(){
         ownHealthStore = HomeScreen().getAccess()
-        self.updateHeartRate()
-        self.updateDistance()
-        self.updatePace()
+        //self.updateHeartRate()
+        //self.updateDistance()
+        //self.updatePace()
         setTime()
-        self.updateTime()
+        //self.updateTime()
     }
     
     func setTime(){
         self.time = self.time + 1
     }
-    
+    /*
     func updateTime(){
         timeLabel.text = String(time)
     }
@@ -61,7 +90,7 @@ class InProcessScreen:UIViewController, CLLocationManagerDelegate{
     
     func updatePace(){
         paceLabel.text = String(ownHealthStore.getNewPace())
-    }
+    }*/
 
     @IBAction func StopButton(_ sender: Any) {
         let ninthVC = self.storyboard?.instantiateViewController(withIdentifier: "EndScreenTwo") as! EndScreenTwo

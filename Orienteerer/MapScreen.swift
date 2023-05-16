@@ -12,6 +12,11 @@ import UIKit
 class MapScreen: UIViewController, CLLocationManagerDelegate
 {
     let manager = CLLocationManager()
+    var array_times = InProcessScreen.array_of_times
+    var array_latitude = InProcessScreen.array_of_latitude
+    var array_longitude = InProcessScreen.array_of_longitude
+    var time:Int = 0
+    let onesecond = 1.0
     @IBOutlet var doneButton: UIButton!
     /*lazy var mapView:MKMapView = {
         let map = MKMapView()
@@ -19,7 +24,7 @@ class MapScreen: UIViewController, CLLocationManagerDelegate
         map.translatesAutoresizingMaskIntoConstraints = false
         return map
     }()*/
-    @IBOutlet var mapView: MKMapView! = HomeScreen().getAccess().mapView
+    @IBOutlet var mapView: MKMapView! = InProcessScreen.transferrableMapView
     override func viewDidLoad(){
        
         super.viewDidLoad()
@@ -27,8 +32,17 @@ class MapScreen: UIViewController, CLLocationManagerDelegate
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
+        for annotation2 in InProcessScreen.array_of_annotations{
+            self.mapView.addAnnotation(annotation2)
+        }
+        time = 0
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updating), userInfo: nil, repeats: true)
         view.bringSubviewToFront(doneButton)
-
+    }
+    
+    @objc func updating(){
+        
+        self.time = self.time + 1
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -39,9 +53,6 @@ class MapScreen: UIViewController, CLLocationManagerDelegate
         let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         mapView.setRegion(region, animated: true)
-        let annotation1 = MKPointAnnotation()
-        annotation1.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        self.mapView.addAnnotation(annotation1)
     }
     
     @IBAction func FinishButton(_ sender: Any) {

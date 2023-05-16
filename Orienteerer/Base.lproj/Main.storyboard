@@ -204,6 +204,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0IV-mh-KVE">
+                                <rect key="frame" x="16" y="513" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B0l-PV-Nf0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -217,6 +222,7 @@
                     <connections>
                         <outlet property="distanceLabel" destination="kCM-zY-1Ce" id="sIr-bD-E02"/>
                         <outlet property="heartrateLabel" destination="Wh7-om-trE" id="dJ4-rY-XCv"/>
+                        <outlet property="mapView" destination="0IV-mh-KVE" id="LN0-q8-Vu9"/>
                         <outlet property="paceLabel" destination="98t-6b-i9z" id="u7V-of-hR1"/>
                         <outlet property="timeLabel" destination="YbE-Yu-L1V" id="MnH-c7-hCd"/>
                     </connections>
@@ -630,7 +636,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="text.insert" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YHb-WP-tPh">
-                                <rect key="frame" x="107" y="186.33333333333337" width="176" height="195.99999999999994"/>
+                                <rect key="frame" x="107" y="186.3333333333334" width="176" height="195.99999999999994"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="TZL-cg-baA"/>
                                     <constraint firstAttribute="height" constant="200" id="YUp-en-ZEO"/>
@@ -651,7 +657,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="nyH-ub-jU3">
-                                <rect key="frame" x="55" y="475" width="195" height="225.66666666666669"/>
+                                <rect key="frame" x="55" y="474.99999999999994" width="195" height="225.66666666666669"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Time Elapsed:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYs-G8-etj">
                                         <rect key="frame" x="0.0" y="0.0" width="195" height="51.666666666666664"/>
