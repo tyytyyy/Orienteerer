@@ -8,10 +8,14 @@
  
 import UIKit
 import HealthKit
+import CoreLocation
+import MapKit
 class HealthStore{
     let healthStore = HKHealthStore() //creates variable healthStore of type HKHealthStore
     var heartRate:Double = 0.0
     var distance: Double = 0.0
+    public var mapView: MKMapView!
+    public let manager = CLLocationManager()
     var pace: Double = 0.0
     init(){ //initializes healthStore as HKHealthStore() if HKHealthStore is available
         heartRate = 0.0
@@ -45,7 +49,21 @@ class HealthStore{
         }
         healthStore.execute(query)
     }
-    
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        render(location: locations.last!)
+    }
+    public func render( location: CLLocation){
+        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+        let annotation1 = MKPointAnnotation()
+        annotation1.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        self.mapView.addAnnotation(annotation1)
+    }
+    public func getMapView() -> MKMapView{
+        return mapView
+    }
     func setNewDistance(){
         guard let type = HKSampleType.quantityType(forIdentifier: .distanceWalkingRunning) else {
             fatalError("Something went wrong retrieving quantity type distanceWalkingRunning")

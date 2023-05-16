@@ -7,8 +7,10 @@
 
 import UIKit
 import ConfettiSwiftUI
+import CoreLocation
+import MapKit
 class Congratulationsscreen: UIViewController {
-
+    var MapView:MKMapView!
     override func viewDidLoad() {
         let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "MapScreen") as! MapScreen
         let seconds = 3.0

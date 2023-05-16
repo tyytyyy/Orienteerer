@@ -19,8 +19,9 @@ class MapScreen: UIViewController, CLLocationManagerDelegate
         map.translatesAutoresizingMaskIntoConstraints = false
         return map
     }()*/
-    @IBOutlet var mapView: MKMapView!
+    @IBOutlet var mapView: MKMapView! = HomeScreen().getAccess().mapView
     override func viewDidLoad(){
+       
         super.viewDidLoad()
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.delegate = self
