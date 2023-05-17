@@ -8,6 +8,7 @@
 import CoreLocation
 import MapKit
 import UIKit
+import _MapKit_SwiftUI
 
 class MapScreen: UIViewController, CLLocationManagerDelegate
 {
@@ -35,6 +36,16 @@ class MapScreen: UIViewController, CLLocationManagerDelegate
         for annotation2 in InProcessScreen.array_of_annotations{
             self.mapView.addAnnotation(annotation2)
         }
+        for time in InProcessScreen.array_of_times{
+            for time1 in ConfirmationScreen.inttimelist{
+                if time == time1 {
+                    let index = InProcessScreen.array_of_times.firstIndex(of: time)!
+                    let coordinate = CLLocationCoordinate2D(latitude: InProcessScreen.array_of_latitude[index], longitude: InProcessScreen.array_of_longitude[index]);
+                    setPinUsingMKAnnotation(location: coordinate)
+                }
+                
+            }
+        }
         time = 0
         _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updating), userInfo: nil, repeats: true)
         view.bringSubviewToFront(doneButton)
@@ -59,4 +70,41 @@ class MapScreen: UIViewController, CLLocationManagerDelegate
         let thirdVC = self.storyboard?.instantiateViewController(withIdentifier: "ScanScreen") as! ScanScreen
                 self.navigationController?.pushViewController(thirdVC, animated: true)
     }
+    func setPinUsingMKAnnotation(location: CLLocationCoordinate2D) {
+        let pin1 = MapPin(title: "Here", locationName: "Device Location", coordinate: location)
+        mapView.addAnnotations([pin1])
+    }
+    
+}
+class MapPin: NSObject, MKAnnotation {
+   let title: String?
+   let locationName: String
+   let coordinate: CLLocationCoordinate2D
+init(title: String, locationName: String, coordinate: CLLocationCoordinate2D) {
+      self.title = title
+      self.locationName = locationName
+      self.coordinate = coordinate
+   }
+}
+
+class ViewController: UIViewController{
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is MKPointAnnotation else { return nil }
+
+        let identifier = "Annotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+        if annotationView == nil {
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView!.canShowCallout = true
+        } else {
+            annotationView!.annotation = annotation
+        }
+        
+        let image = #imageLiteral(resourceName: "Untitled-1")
+        annotationView?.image = image
+        return annotationView
+    }
+
 }

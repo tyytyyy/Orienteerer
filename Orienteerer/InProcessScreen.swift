@@ -51,9 +51,9 @@ class InProcessScreen:UIViewController, CLLocationManagerDelegate{
         mapView.setRegion(region, animated: true)
         let annotation1 = MKPointAnnotation()
         annotation1.coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        InProcessScreen.array_of_annotations.append(annotation1)
         self.mapView.addAnnotation(annotation1)
         InProcessScreen.transferrableMapView = mapView
+        InProcessScreen.array_of_annotations.append(annotation1)
         InProcessScreen.array_of_times.append(time)
         InProcessScreen.array_of_latitude.append(location.coordinate.latitude)
         InProcessScreen.array_of_longitude.append(location.coordinate.longitude)

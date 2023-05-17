@@ -47,7 +47,7 @@ class ConfirmationScreen: UIViewController {
     var image1: UIImage!
     var cgImage: CGImage!
     var timelist: [UITextField] = []
-    var inttimelist: [Int] = []
+    static var inttimelist: [Int] = []
     //timelist contains labels, inttimelist contains time in seconds
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -153,7 +153,7 @@ class ConfirmationScreen: UIViewController {
             label.font = UIFont(name:"Futura-Medium", size:UIScreen.main.bounds.width/17.91666667)
             label.addTarget(self, action: #selector(ConfirmationScreen.textFieldDidChange(_:)), for: .editingChanged)
             self.view.addSubview(label)
-            inttimelist.append(converttoseconds(hours: i))
+            ConfirmationScreen.inttimelist.append(converttoseconds(hours: i))
             y = y+Int(UIScreen.main.bounds.height/18.64)
             if(y>height-100){
                 y = 170
@@ -217,7 +217,7 @@ class ConfirmationScreen: UIViewController {
     @objc func textFieldDidChange(_ label: UITextField) {
         let index = timelist.firstIndex(of: label)!
         //maybe check if entered is valid time
-        inttimelist[index] = converttoseconds(hours: label.text!)
+        ConfirmationScreen.inttimelist[index] = converttoseconds(hours: label.text!)
     }
     
     
