@@ -125,6 +125,13 @@
                                     <action selector="nextScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3H-BT-NHE"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nlm-6A-TIg">
+                                <rect key="frame" x="91" y="466" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="XcF-Pa-EKd"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B0l-PV-Nf0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -136,6 +143,9 @@
                             <constraint firstItem="joe-NH-sXd" firstAttribute="centerX" secondItem="9Ka-e4-gbg" secondAttribute="centerX" id="qaF-Xi-ZDT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="nlm-6A-TIg" id="M0G-j7-4Su"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLI-4w-yMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -469,19 +479,16 @@
                                     <action selector="FinishButton:" destination="wGv-2G-oKP" eventType="touchUpInside" id="SFe-mk-EsT"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DEg-m6-LLX">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DEg-m6-LLX">
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DgO-uI-pBp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DEg-m6-LLX" firstAttribute="centerY" secondItem="j86-EK-Q5P" secondAttribute="centerY" constant="6.5" id="IIe-Im-6wg"/>
-                            <constraint firstItem="DEg-m6-LLX" firstAttribute="centerX" secondItem="j86-EK-Q5P" secondAttribute="centerX" id="N2X-YH-3zE"/>
-                            <constraint firstItem="DEg-m6-LLX" firstAttribute="centerX" secondItem="j86-EK-Q5P" secondAttribute="centerX" id="P9t-Fj-HyC"/>
                             <constraint firstItem="4fL-Qx-0oV" firstAttribute="centerY" secondItem="j86-EK-Q5P" secondAttribute="centerY" constant="237.5" id="R3K-xb-o3P"/>
-                            <constraint firstItem="DEg-m6-LLX" firstAttribute="centerY" secondItem="j86-EK-Q5P" secondAttribute="centerY" id="ZN5-H6-dUt"/>
                             <constraint firstItem="4fL-Qx-0oV" firstAttribute="centerX" secondItem="j86-EK-Q5P" secondAttribute="centerX" constant="58.5" id="mIu-3I-2PH"/>
                         </constraints>
                     </view>
