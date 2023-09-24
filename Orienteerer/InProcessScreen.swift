@@ -93,7 +93,7 @@ class InProcessScreen:UIViewController, CLLocationManagerDelegate{
     }*/
 
     @IBAction func StopButton(_ sender: Any) {
-        let ninthVC = self.storyboard?.instantiateViewController(withIdentifier: "EndScreenTwo") as! EndScreenTwo
+        let ninthVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeScreen") as! HomeScreen
                 self.navigationController?.pushViewController(ninthVC, animated: true)
     }
     
